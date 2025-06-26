@@ -1,126 +1,124 @@
 # Study of the vertical temperature profile in a tomato greenhouse equipped with lighting, two screens and a VentilationJet system
 
+# 配备照明、双层幕布和通风喷射系统的番茄温室垂直温度分布研究
+
 Acta Horticulturae Tsafaras, I.; Gelder, A.; Vanthoor, B.H.E. https://doi.org/10.17660/ActaHortic.2020.1296.16
 
-This article is made publicly available in the institutional repository of Wageningen University and Research, under the terms of article $2 5 \mathrm { f a }$ of the Dutch Copyright Act, also known as the Amendment Taverne. This has been done with explicit consent by the author.
-
-Article 25fa states that the author of a short scientific work funded either wholly or partially by Dutch public funds is entitled to make that work publicly available for no consideration following a reasonable period of time after the work was first published, provided that clear reference is made to the source of the first publication of the work.
-
-This publication is distributed under The Association of Universities in the Netherlands (VSNU) 'Article 25fa implementation' project. In this project research outputs of researchers employed by Dutch Universities that comply with the legal requirements of Article 25fa of the Dutch Copyright Act are distributed online and free of cost or other barriers in institutional repositories. Research outputs are distributed six months after their first online publication in the original published version and with proper attribution to the source of the original publication.
-
-You are permitted to download and use the publication for personal purposes. All rights remain with the author(s) and / or copyright owner(s) of this work. Any use of the publication or parts of it other than authorised under article 25fa of the Dutch Copyright act is prohibited. Wageningen University & Research and the author(s) of this publication shall not be held responsible or liable for any damages resulting from your (re)use of this publication.
-
-For questions regarding the public availability of this article please contact openscience.library@wur.nl
-
-# Study of the vertical temperature profile in a tomato greenhouse equipped with lighting, two screens and a VentilationJet system
+# 配备照明、双层幕布和通风喷射系统的番茄温室垂直温度分布研究
 
 I. Tsafarasa, A. de Gelder and B.H.E. Vanthoor
 
-Wageningen University and Research Centre, Greenhouse Horticulture, PO Box 644, 6700AP Wageningen, The Netherlands.
+瓦赫宁根大学与研究中心，温室园艺，邮政信箱644，6700AP瓦赫宁根，荷兰
 
-# Abstract
+# 摘要
 
-The application of Next Generation Growing (NGG, in Dutch “Het Nieuwe Telen”) in Dutch greenhouses has resulted in energy savings, accompanied by the extensive use of screens. The latter has affected the control of greenhouse climate which strongly depends on the air and humidity exchange between the top and bottom greenhouse compartment, as they are separated by the screen itself. When the screens are fully deployed an air exchange/mix system (VentilationJet) that blows dry and cold air from the top compartment into the greenhouse can be used to lower the greenhouse air temperature and relative humidity in a controllable way. The effect of this greenhouse climate control equipment use on vertical air temperature profile as well as on energy use was studied in a commercial greenhouse. Effects of artificial lighting, heating with pipes below the crop, activation of vertical fans and air exchange rate were analyzed during the winter of 2018. It was observed that when significant heat input (radiation) at the top of the crop occurred a vertical temperature gradient up to $\mathbf { 2 ^ { \circ } C }$ exists, with the bottom of the crop being colder than the top. This temperature gradient cannot be reduced by using only vertical air circulation fans but it can be minimized by additional heat input at the bottom; this may result in excess heat that has to be removed through either natural ventilation or with the use of VentilationJet when the screens are deployed. During the studied period about a quarter of the daily gas use for heating took place at the same time as the VentilationJet was removing warm and humid air from the top of the greenhouse.
+下一代种植技术（NGG，荷兰语为"Het Nieuwe Telen"）在荷兰温室中的应用带来了节能效果，同时伴随着幕布的广泛使用。后者影响了温室气候的控制，因为温室气候在很大程度上取决于顶部和底部温室隔间之间的空气和湿度交换，而它们被幕布本身隔开。当幕布完全展开时，可以使用空气交换/混合系统（VentilationJet）将干燥和寒冷的空气从顶部隔间吹入温室，以可控的方式降低温室空气温度和相对湿度。在商业温室中研究了这种温室气候控制设备的使用对垂直空气温度分布以及能源使用的影响。分析了2018年冬季人工照明、作物下方管道加热、垂直风扇激活和空气交换率的影响。观察到当作物顶部发生显著的热量输入（辐射）时，存在高达$\mathbf { 2 ^ { \circ } C }$的垂直温度梯度，作物底部比顶部更冷。这种温度梯度不能仅通过使用垂直空气循环风扇来减少，但可以通过底部的额外热量输入来最小化；这可能导致需要通过自然通风或在使用幕布时使用VentilationJet来去除多余的热量。在研究期间，大约四分之一的每日加热用气发生在VentilationJet从温室顶部去除温暖潮湿空气的同时。
 
-Keywords: air temperature, vertical temperature profile, air mixing systems, microclimate, tomato temperature
+关键词：空气温度，垂直温度分布，空气混合系统，微气候，番茄温度
 
-# INTRODUCTION
+# 引言
 
-Commercial greenhouse climate control is usually based on a number of measured climate data which serve as input to a number rules (if…then), influences and associated settings, that the grower tries to manage in order to achieve the most favorable climate for crop growth and production, when at the same time the applied strategy should not result in unnecessary resource use. Climate homogeneity is also one of the main targets of a greenhouse control system as it is linked to a number of obvious advantages, such as homogenous crop, lesser diseases and potential energy saving. Usually the aforementioned climate data include temperature and humidity measurements collected at a representative point in the greenhouse. Obviously the accuracy of the measurements affects the efficiency of the control. However, despite the accuracy of the measurements obtained by a single sensor, hardly any information is provided about the spatial distribution of these measurements. Previous studies have shown that temperature and humidity variations are common in greenhouses (Balendonck et al., 2014).
+商业温室气候控制通常基于一系列测量的气候数据，这些数据作为一系列规则（如果...那么）、影响和相关设置的输入，种植者试图管理这些以实现作物生长和生产的最有利气候，同时应用策略不应导致不必要的资源使用。气候均匀性也是温室控制系统的主要目标之一，因为它与许多明显优势相关，如作物均匀性、较少疾病和潜在节能。通常上述气候数据包括在温室中代表性点收集的温度和湿度测量值。显然，测量的准确性会影响控制的效率。然而，尽管单个传感器获得的测量值准确，但几乎无法提供这些测量值的空间分布信息。先前的研究表明，温室中的温度和湿度变化是常见的（Balendonck等，2014）。
 
-The application of different climate control equipment in modern greenhouses strongly affects the climate homogeneity. One of the most representative examples is the air exchange/mix system (VentilationJet) that are commonly used to lower the greenhouse air temperature and relative humidity in a controllable way by blowing dry and cold air from the top compartment into the greenhouse when screens are deployed. The use of more than one climate control system at the moment (e.g., heating, artificial lighting, screens and VentilationJet) increases the complexity and makes difficult to predict the local microclimate at different places in the greenhouse. The emergence of wireless sensors allows the collection of more information regarding the climate homogeneity.
+现代温室中不同气候控制设备的应用强烈影响气候均匀性。最具代表性的例子之一是空气交换/混合系统（VentilationJet），当幕布展开时，通常通过将干燥和寒冷的空气从顶部隔间吹入温室来以可控的方式降低温室空气温度和相对湿度。同时使用多个气候控制系统（例如加热、人工照明、幕布和VentilationJet）增加了复杂性，使得难以预测温室中不同地方的局部微气候。无线传感器的出现允许收集更多关于气候均匀性的信息。
 
-Aim of the current study is to investigate how the climate control strategy and especially the use of VentilationJet in combination with other climate control equipment affects the vertical temperature profile in a commercial greenhouse.
+本研究的目的是调查气候控制策略，特别是VentilationJet与其他气候控制设备的结合使用如何影响商业温室中的垂直温度分布。
 
-# MATERIALS AND METHODS
+# 材料与方法
 
-The experiment took place in the facilities of Gardener’s Pride, a tomato grower at the north of The Netherlands. The greenhouse where the climate was monitored was built in 2014 and equipped with artificial lights (installed intensity: $1 2 0 \mathrm { { W m ^ { - 2 } } }$ providing $2 0 0 \mu \mathrm { m o l }$ PAR $\mathbf { m } ^ { - 2 }$ $\left. s ^ { - 1 ^ { \cdot } } \right|$ ), double screens (LUXOUS 1347 FR (energy screen) and OBSCURA 9950 FR W (Blackout screen)), rail-pipe ( $5 1 \mathrm { m m } \cdot 1 . 1 7 \mathrm { m }$ pipe $\mathbf { m } ^ { - 2 }$ greenhouse area) and grow- pipe $( 5 1 \mathrm { m m } \cdot 0 . 5 8 \$ m pipe $\mathbf { m } ^ { - 2 }$ greenhouse area) heating systems, VentilationJets (capacity $1 5 ~ \mathrm { m ^ { 3 } ~ m ^ { - 2 } ~ h ^ { - 1 } }$ and lower air circulation fans. In this greenhouse cherry tomatoes (‘Juanita’) were growing since summer (transplanted in June 2017).
+实验在荷兰北部的番茄种植者Gardener's Pride的设施中进行。监测气候的温室建于2014年，配备有人工照明（安装强度：$1 2 0 \mathrm { { W m ^ { - 2 } } }$，提供$2 0 0 \mu \mathrm { m o l }$ PAR $\mathbf { m } ^ { - 2 }$ $\left. s ^ { - 1 ^ { \cdot } } \right|$），双层幕布（LUXOUS 1347 FR（节能幕布）和OBSCURA 9950 FR W（遮光幕布）），轨道管道（$5 1 \mathrm { m m } \cdot 1 . 1 7 \mathrm { m }$管道$\mathbf { m } ^ { - 2 }$温室面积）和生长管道（$5 1 \mathrm { m m } \cdot 0 . 5 8 \$ m管道$\mathbf { m } ^ { - 2 }$温室面积）加热系统，VentilationJets（容量$1 5 ~ \mathrm { m ^ { 3 } ~ m ^ { - 2 } ~ h ^ { - 1 } }$）和下部空气循环风扇。自2017年夏季（2017年6月移植）以来，该温室中一直种植着樱桃番茄（'Juanita'）。
 
-The vertical temperature profile was monitored with the use of five vertically placed ventilated temperature sensorsb from AgriSensys (The Netherlands). Data were recorded at three locations in the greenhouse on a 5-min frequency for a period of 2 months starting from the end of January 2018. As soon as the effect of VentilationJets and lower air circulation fans was an aim of the study, the sensor’s locations were selected to be below a VentilationJet, between and in-line with two VentilationJets and as far away as possible from VentilationJets; from now on the report these three locations are called “Between VJ”, “Below VJ” and $" \mathrm { N o } \mathrm { V J ^ { \prime \prime } } .$ , respectively.
+使用来自AgriSensys（荷兰）的五个垂直放置的通风温度传感器监测垂直温度分布。数据在温室中的三个位置以5分钟的频率记录，从2018年1月底开始，持续2个月。由于研究VentilationJets和下部空气循环风扇的影响是本研究的目的之一，因此传感器的位置选择在VentilationJet下方、两个VentilationJet之间和与VentilationJet尽可能远的位置；从现在起，报告中这三个位置分别称为"Between VJ"、"Below VJ"和"$\mathrm { N o } \mathrm { V J ^ { \prime \prime } }$"。
 
-The tomato temperature was also monitored. That was achieved with the use of thermocouples placed inside the tomato fruits and re-placed when a tomato fruit was physically destroyed due to the small hole made to insert the thermocouple. Furthermore, the tomato temperature was monitored with the use of an infrared camera (FLIR $\mathsf { A } 6 5 5 ^ { \mathrm { ~ c ~ } }$ from FLIR Systems, Inc., Täby, Sweden). Additionally, temperature of bigger tomato fruits was monitored with the use of artificially made tomatoes (SensorTom from HortiMaX, The Netherlands) equipped with temperature sensors (PT1000), with the same physical characteristics real tomatoes; the size of the artificial tomatoes is comparable to the size of a tomato fruit of about $2 2 0 { \mathrm { g } } .$ The tomato temperature measurements took place at the measuring spot between and in line with two VentilationJets (“Between VJ”).
+还监测了番茄温度。这是通过在番茄果实内部放置热电偶来实现的，当由于插入热电偶而造成的孔洞导致番茄果实物理损坏时，重新放置热电偶。此外，使用红外相机（FLIR $\mathsf { A } 6 5 5 ^ { \mathrm { ~ c ~ } }$，来自FLIR Systems, Inc.，瑞典Täby）监测番茄温度。另外，使用人工制作的番茄（来自HortiMaX，荷兰的SensorTom）配备温度传感器（PT1000）监测较大番茄果实的温度，这些人工番茄具有与真实番茄相同的物理特性；人工番茄的大小与约$2 2 0 { \mathrm { g } }$的番茄果实相当。番茄温度测量在两个VentilationJet之间和与两个VentilationJet在一条线上的测量点（"Between VJ"）进行。
 
-# RESULTS
+# 结果
 
-During the analyzed period it was found that the air temperature around the top of the crop was on average $0 . 4 ^ { \circ } \mathrm { C }$ higher than the air temperature at the bottom of the crop (varying between 0 and $1 ^ { \circ } \mathrm { C }$ on a daily basis). During the light period (either sun radiation or use of artificial illumination) this temperature difference was almost double on average $( 0 . 7 ^ { \circ } \mathrm { C } )$ when during the dark period the bottom of the crop was warmer by $0 . 6 ^ { \circ } \mathrm { C }$ on average. Regarding the homogeneity of the vertical temperature profile, it was not significantly different between the light and the dark period; the average standard deviation of the temperature measured at 5 different heights was found to be $0 . 4 ^ { \circ } \mathrm { C }$ . The recorded data are not different than expected; during the light period the main heat input comes either from the sun or from the artificial lights, resulting in higher temperature at the top when during the dark period almost always (at this time of the year) there was heat input from the heating system resulting in warmer bottom than top of the crop.
+在分析期间发现，作物顶部的空气温度平均比作物底部高$0.4^{\circ}\mathrm{C}$（每日变化在0到$1^{\circ}\mathrm{C}$之间）。在光照期间（无论是太阳辐射还是人工照明），这种温差平均几乎翻倍$(0.7^{\circ}\mathrm{C})$，而在黑暗期间，作物底部平均比顶部温暖$0.6^{\circ}\mathrm{C}$。关于垂直温度分布的均匀性，光照和黑暗期间没有显著差异；在5个不同高度测量的温度平均标准差为$0.4^{\circ}\mathrm{C}$。记录的数据与预期没有差异；在光照期间，主要的热量输入来自太阳或人工照明，导致顶部温度较高，而在黑暗期间（在一年中的这个时候）几乎总是有来自加热系统的热量输入，导致底部比顶部温暖。
 
-In order to analyze in more details the effect of climate control actions in combination with the weather on the vertical air temperature profile, three different periods are defined within each day and the results of each of those periods are discussed separately.
+为了更详细地分析气候控制措施与天气对垂直空气温度分布的影响，每天定义了三个不同的时期，并分别讨论了每个时期的结果。
 
-# Air temperature
+# 空气温度
 
-# 1. Period with artificial lighting and no sunlight.
+# 1. 人工照明且无阳光的时期
 
-This is the period of the day when the artificial lights were used and the screens were deployed. This is the period where this study mainly focuses on, as it is the period when most of the climate control actions take place. Figure 1 (top graph) shows the temperature difference between the top and the bottom of the crop, averaged per day, during the hours when the artificial lights were on, at least one screen was deployed and there was no sun radiation. During the analyzed time and regarding the vertical temperature differences, 5 subperiods can be distinguished (Figure 1):
+这是一天中使用人工照明并展开幕布的时期。这是本研究主要关注的时期，因为这是大多数气候控制措施发生的时期。图1（上图）显示了在人工照明开启、至少一个幕布展开且没有太阳辐射的时段内，作物顶部和底部之间温度差异的日平均值。在分析期间，关于垂直温度差异，可以区分出5个子时期（图1）：
 
 ![](images/48756d8fc373c06e813bc40ae8cc8ec1c45cb1f946f1c447585002931f6d0fcd.jpg)  
-Figure 1. Daily averages of the vertical temperature differences (above) and climate control equipment (heating, lighting, screen use, vertical fans and VentilationJets) during the hours that the lighting was switched on and there was no sunlight.
+图1. 在照明开启且无阳光的时段内，垂直温度差异（上图）和气候控制设备（加热、照明、幕布使用、垂直风扇和VentilationJets）的日平均值。
 
-Sub-period 1: use of only lower ventilator.
+子时期1：仅使用下部通风机
 
-First week of February when the temperature difference was high. During that period the air around the top of the crop was on average $0 . 8 ^ { \circ } \mathrm { C }$ warmer than the air at the bottom, reaching during some nights values up to $1 . 5 ^ { \circ } \mathrm { C }$ . This period is characterized by: use of artificial lights (half of the total capacity), low (except of one day) heat input from the pipes, unfolded screens, no use of the VentilationJets but only the lower air circulation fans were used. It can be concluded that the heat provided by the lights is not homogeneously distributed to the greenhouse in the vertical direction; possibly the resistance of the crop to the air flow plays a significant role on that (especially for the measurements which were recorded by sensors between the plants). Comparing the vertical temperature differences on nights where the lower air circulation fans were used with nights that there were not used (e.g., on February 1 and 2) it can be concluded that the use of the fans does not reduce the vertical temperature differences. A possible reason for that is the resistance of the crop that forces the warm air to move mainly horizontally and not vertically downwards.
+2月第一周，温度差异较大。在此期间，作物顶部的空气平均比底部温暖$0.8^{\circ}\mathrm{C}$，在某些夜晚达到$1.5^{\circ}\mathrm{C}$。这一时期的特点是：使用人工照明（总容量的一半），管道热量输入较低（除一天外），幕布未展开，未使用VentilationJets，仅使用了下部空气循环风扇。可以得出结论，照明提供的热量在垂直方向上没有均匀分布到温室中；可能是作物对气流的阻力起到了重要作用（特别是对于植物之间传感器记录的测量值）。比较使用下部空气循环风扇的夜晚与未使用的夜晚（例如2月1日和2日）的垂直温度差异，可以得出结论，使用风扇并不能减少垂直温度差异。一个可能的原因是作物的阻力迫使暖空气主要水平移动而不是垂直向下移动。
 
-# Sub-period 2: VentilationJet ON I.
+# 子时期2：VentilationJet开启I
 
-The next two weeks ( $2 ^ { \mathrm { n d } }$ and $3 ^ { \mathrm { r d } }$ week of February) when the temperature difference between the top and the bottom were minimised. During this period the average temperature difference was less than $0 . 2 ^ { \circ } \mathrm { C }$ (from 0 until $0 . 4 ^ { \circ } \mathrm { C }$ on a daily basis). During that period the VentilationJets were used and in addition the heat input from the pipes was on average more than double than during the first week of February (estimated on average 23.5 and $1 1 \mathrm { W } \mathrm { m } ^ { - 2 }$ , respectively). Apparently the heat input from the top (artificial illumination) and the bottom (heating system) was more balanced resulting in more homogeneous vertical temperature distribution. We can assume that the cold air input from the VentilationJets was quite homogeneously distributed from the lower air circulation fans as there were no big differences in the measured locations closer or further from the VentilationJets. Also, due to density difference the cold air was allowed to move downwards more easily, helping also in a more homogeneous temperature profile.
+接下来的两周（2月第二和第三周），顶部和底部之间的温度差异最小化。在此期间，平均温度差异小于$0.2^{\circ}\mathrm{C}$（每日从0到$0.4^{\circ}\mathrm{C}$）。在此期间使用了VentilationJets，此外，管道的热量输入平均比2月第一周多了一倍以上（估计平均分别为23.5和$11\mathrm{W}\mathrm{m}^{-2}$）。显然，来自顶部（人工照明）和底部（加热系统）的热量输入更加平衡，导致垂直温度分布更加均匀。我们可以假设，由于测量位置靠近或远离VentilationJets没有大的差异，来自VentilationJets的冷空气输入通过下部空气循环风扇相当均匀地分布。此外，由于密度差异，冷空气更容易向下移动，也有助于更均匀的温度分布。
 
-# Sub-period 3: VentilationJet ON and full light.
+# 子时期3：VentilationJet开启且全光照
 
-The last week of February and first 10 days of March when the temperature difference between the top and the bottom was increased again to $0 . 8 ^ { \circ } \mathrm { C }$ (on average). During this period the artificial illumination was used at full capacity, resulting in a twice as high heat input at the top of the greenhouse than in the previous days; the heat input at the lower part (heating system) was not significantly different than before. On the other hand, the outside air temperature in period 3 was on average $5 ^ { \circ } \mathrm { C }$ lower than in period 2 (-5.3 and $- 0 . 2 ^ { \circ } \mathsf { C } ,$ respectively) but due to less window opening there was only little additional heat removal from the cold air input (VentilationJets) which was apparently not enough to compensate for the additional heat input from the lights. To provide an order of magnitude of the aforementioned heat fluxes, supposing that in period 3 the cold air input was $2 ^ { \circ } \mathrm { C }$ lower than in period 2, then that would result in removal of about only $8 ~ \mathrm { W ~ m } ^ { - 2 }$ more when the double light intensity adds to the greenhouse energy balance about $3 0 \mathrm { { W } \mathrm { { m } ^ { - 2 } } }$ .
+2月最后一周和3月前10天，顶部和底部之间的温度差异再次增加到$0.8^{\circ}\mathrm{C}$（平均）。在此期间，人工照明以全容量使用，导致温室顶部的热量输入是前几天的两倍；下部（加热系统）的热量输入与之前没有显著差异。另一方面，时期3的室外空气温度平均比时期2低$5^{\circ}\mathrm{C}$（分别为-5.3和$-0.2^{\circ}\mathsf{C}$），但由于窗户开得较少，来自冷空气输入（VentilationJets）的额外热量去除很少，显然不足以补偿来自照明的额外热量输入。为了提供上述热通量的数量级，假设在时期3中冷空气输入比时期2低$2^{\circ}\mathrm{C}$，那么这将导致仅去除约$8~\mathrm{W}~\mathrm{m}^{-2}$，而双倍光强为温室能量平衡增加了约$30\mathrm{W}\mathrm{m}^{-2}$。
 
-# Sub-period 4: VentilationJet ON III.
+# 子时期4：VentilationJet开启III
 
-The period of 2 weeks starting at March 5 when there was again little air temperature difference between the top and the bottom. The light intensity during that period was set to $7 5 \%$ of the total capacity and additionally one screen was mainly kept folded allowing easier (hot) air removal to the top compartment (above the screens). During that period the average recorded air temperature difference between the top and the bottom was only $0 . 1 ^ { \circ } \mathrm { C }$ .
+从3月5日开始的2周期间，顶部和底部之间的空气温度差异再次很小。在此期间，光强设置为总容量的$75\%$，此外，一个幕布主要保持折叠，允许更容易地将（热）空气去除到顶部隔间（幕布上方）。在此期间，记录的顶部和底部之间的平均空气温度差异仅为$0.1^{\circ}\mathrm{C}$。
 
-Sub-period 5: heat.
+子时期5：加热
 
-The 5 days of the analyzed period when the bottom of the crop was (on average $0 . 8 ^ { \circ } \mathrm { C }$ ) warmer than the top. During this period the heat input from the heating system was increased by a factor 4 (compared to period 4) as a result of pipe temperatures of around $5 0 ^ { \circ } \mathrm { C }$ The result of this additional heat input at the bottom was the aforementioned negative temperature difference between the top and the bottom.
+分析期间的5天，作物底部（平均$0.8^{\circ}\mathrm{C}$）比顶部温暖。在此期间，加热系统的热量输入增加了4倍（与时期4相比），管道温度约为$50^{\circ}\mathrm{C}$。底部额外热量输入的结果是上述顶部和底部之间的负温度差异。
 
-Summarizing, it was found out that the use of artificial lights without heat input from the pipes and without the use of VentilationJets results in vertical temperature gradients as the top of the crop remains about $1 ^ { \circ } \mathrm { C }$ warmer than the bottom. This temperature difference cannot be controlled by the use of only the lower vertical fans, but it can be controlled when both the VentilationJets and the heating system are used. Specifically, when the VentilationJets remove part of the heat from the top of the greenhouse and at the same time almost the same amount of heat is added from the heating system then the temperature distribution over the vertical dimension is very homogeneous. However, a balance between these heat fluxes is needed; it was found that more energy input from the lights (period 3) or from the pipes (period 5) can still result in vertical temperature differences and warmer top or bottom, respectively.
+总结发现，使用人工照明而没有来自管道的热量输入且不使用VentilationJets会导致垂直温度梯度，作物顶部比底部温暖约$1^{\circ}\mathrm{C}$。这种温度差异不能仅通过使用下部垂直风扇来控制，但当同时使用VentilationJets和加热系统时可以控制。具体来说，当VentilationJets从温室顶部去除部分热量，同时几乎相同数量的热量从加热系统添加时，垂直维度上的温度分布非常均匀。然而，需要在这些热通量之间保持平衡；发现来自照明（时期3）或管道（时期5）的更多能量输入仍可能导致垂直温度差异，分别使顶部或底部更温暖。
 
-# 2. The daytime period (with sun radiation).
+# 2. 白天时段（有太阳辐射）
 
-During the light period, the air around the top of the crop was almost always warmer than around the bottom. It can be concluded that the heat supplied by the sun and the lamps contributes relatively more in heating up the top rather than the bottom part of the greenhouse air; taking into account that a well-developed tomato canopy (with leaf area index $3 . 5 \mathrm { m } ^ { 2 } \mathrm { m } ^ { - 2 } ,$ absorbs more than $9 0 \%$ of the direct sun radiation the aforementioned result was expected. Until half February, when the days were relatively cold, short and dark smaller vertical temperatures differences were recorded. The temperatures differences were slightly higher during the second half of February and in March there were both days with high and days with low vertical temperature differences.
+在光照期间，作物顶部的空气几乎总是比底部更温暖。可以得出结论，太阳和灯具提供的热量相对更多地加热了温室空气的顶部而不是底部；考虑到发育良好的番茄冠层（叶面积指数为$3.5\mathrm{m}^{2}\mathrm{m}^{-2}$）吸收了超过$90\%$的直接太阳辐射，上述结果是预期的。直到2月中旬，当天气相对寒冷、白天较短且较暗时，记录的垂直温度差异较小。2月下旬和3月期间，温度差异略有增加，既有垂直温度差异较大的日子，也有较小的日子。
 
-During the light period a strong relationship between the amount of heat input and the vertical temperature differences was observed; the more heat input from the rail and growpipes the less temperature differs between the top and bottom of the crop, mainly due to warmer bottom part. This is even more clear in March when during the days with lower heat input from the pipes the vertical temperature difference was much higher than during the days with more heat input from the pipes (Figure 2). Of course the days when heat input from the heating pipes was realized were also the most dark days so the effect of sun radiation also affects the vertical temperature distribution. It can be roughly concluded that between very dark days $\left( < 2 ~ \mathrm { M J ~ m ^ { - 2 } } \right.$ daily global radiation sum) and days when a radiation sum of about 17 MJ $\mathbf { m } ^ { - 2 }$ day-1 was achieved, the vertical temperature difference increases by about $0 . 2 ^ { \circ } \mathrm { C }$ (top warmer) per 1 MJ $\mathbf { m } ^ { - 2 }$ additional radiation (Figure 2).
+在光照期间，观察到热量输入量与垂直温度差异之间存在强相关性；从轨道和生长管道输入的热量越多，作物顶部和底部之间的温度差异越小，这主要是由于底部温度升高。这在3月更加明显，当管道热量输入较低的日子，垂直温度差异比管道热量输入较多的日子要大得多（图2）。当然，实现管道热量输入的日子也是最黑暗的日子，因此太阳辐射的影响也会影响垂直温度分布。可以大致得出结论，在非常黑暗的日子（每日总辐射量$<2\mathrm{MJ}\mathrm{m}^{-2}$）和实现约17 MJ$\mathbf{m}^{-2}$天-1辐射量的日子之间，每增加1 MJ$\mathbf{m}^{-2}$辐射量，垂直温度差异增加约$0.2^{\circ}\mathrm{C}$（顶部更温暖）（图2）。
 
 ![](images/8df6fd0c0cec924bde83487e9cb0b4c21f724bb8c4a3d21de19045415d7b2aea.jpg)  
-Figure 2. Average daily vertical temperature differences (top-bottom) during the light period versus the heat supply of the heating system (left) and the daily radiation sum (right).
+图2. 光照期间每日平均垂直温度差异（顶部-底部）与加热系统热量供应（左）和每日辐射量（右）的关系。
 
-Concluding, on sunny days it should be expected that a vertical temperature gradient will exist. If one wants to minimise these differences, it was observed that this is well possible by using the heating system; if the additional heat supply results in excess of heat which has to ventilated out it is expected that the increased ventilation rate will help toward a more homogeneous vertical temperature profile, but it has to evaluated whether this is preferable in comparison to other side effects such as higher $\mathsf { C O } _ { 2 }$ losses.
+总结来说，在晴天应该预期会存在垂直温度梯度。如果想要最小化这些差异，观察到使用加热系统可以很好地实现这一点；如果额外的热量供应导致需要排出的热量过剩，预计增加的通风率将有助于实现更均匀的垂直温度分布，但需要评估这是否比其他副作用（如更高的$\mathsf{CO}_{2}$损失）更可取。
 
-# 3. The dark period.
+# 3. 黑暗时段
 
-A dark period of about $6 \mathrm { { h } }$ , from 18:00 to 00:00 was usually realized in Gardener’s Pride during the analyzed period. During the dark period, the heating system was almost continuously used in order to achieve the temperature set-point. This resulted almost always in negative vertical temperature differences, or in other words, warmer bottom than top of the crop. Taking into account that the windows were always a bit open during this period, the inlet of cold air from outside (up to $1 5 ^ { \circ } \mathrm { C }$ colder than the greenhouse air) in combination with the heat input from the heating system created the described difference. The vertical temperature profile tends to homogenize due to buoyancy but as soon as the heat input at the bottom continues and the cold inlet continues as well the difference was maintained. The vertical temperature difference tended to be higher (warmer bottom) when the outside air temperature was lower (e.g. at the end of February and beginning of March).
+在分析期间，Gardener's Pride通常实现了约$6\mathrm{h}$的黑暗时段，从18:00到00:00。在黑暗时段，加热系统几乎连续使用以达到温度设定值。这几乎总是导致负的垂直温度差异，换句话说，作物底部比顶部更温暖。考虑到在此期间窗户总是稍微打开，从外部进入的冷空气（比温室空气低达$15^{\circ}\mathrm{C}$）与加热系统的热量输入共同造成了上述差异。由于浮力作用，垂直温度分布趋于均匀化，但只要底部继续输入热量并且冷空气继续进入，差异就会保持。当外部空气温度较低时（例如2月底和3月初），垂直温度差异往往更大（底部更温暖）。
 
-# Tomato temperature
+# 番茄温度
 
-It was observed that the fruit temperature was usually following very closely the air temperature. The cherry tomato temperature hardly differed from the air temperature (Figure 3) and even during the heating up period in the morning and the cooling down period in the afternoon, only slight delays between the air and tomato temperature changes were observed. More specifically, in the morning, the tomatoes were heated up from the sun slightly faster than the air and in the afternoon they were cooling down a few minutes slower than the air. During the day period, the tomato temperature was very close to the air temperature; only few times on sunny days the tomato temperature exceeded air temperature (Figure 3). During the dark period the tomato temperature tended to be slightly higher than the air temperature mainly because the tomatoes cooled down a bit slower than the air. Finally, during the period with the artificial lights, the tomatoes maintained at slightly higher temperature than the air. On a 24-h basis, the average tomato temperature was about $0 . 1 2 ^ { \circ } \mathrm { C }$ higher than the average air temperature.
+观察到果实温度通常非常接近空气温度。樱桃番茄的温度与空气温度几乎没有差异（图3），即使在早晨升温期间和下午降温期间，也只观察到空气和番茄温度变化的轻微延迟。更具体地说，在早晨，番茄从太阳中升温比空气稍快，在下午，它们降温比空气慢几分钟。在白天期间，番茄温度非常接近空气温度；只有在少数晴天，番茄温度超过了空气温度（图3）。在黑暗期间，番茄温度往往略高于空气温度，主要是因为番茄降温比空气稍慢。最后，在人工照明期间，番茄保持略高于空气的温度。在24小时的基础上，平均番茄温度比平均空气温度高约$0.12^{\circ}\mathrm{C}$。
 
 ![](images/ce1f2621b3a2faff2b161e0ca05396e47e336e64d4bb7a49254dc23f938f0f9b.jpg)  
-Figure 3. Solar radiation intensity and lighting (above) and air, real (cherry) tomato and artificial (large) tomato (lower SensorTom) temperature during one week in March 2018.
+图3. 2018年3月一周期间的太阳辐射强度和照明（上图）以及空气、真实（樱桃）番茄和人工（大）番茄（下SensorTom）温度。
 
-In general, there were no significant differences recorded in the tomato temperature in different heights; the tomato temperature followed the air temperature and when the air temperature was similar in different heights, the same happened with the tomato temperature.
+总的来说，在不同高度记录的番茄温度没有显著差异；番茄温度跟随空气温度，当不同高度的空气温度相似时，番茄温度也是如此。
 
-The outcome was quite different for the artificial tomato, which showed significant delays in warming up and cooling down in comparison with the greenhouse air temperature (and the real (cherry) tomato temperature). Obviously, there is a strong effect of the tomato size (and so heat capacity) on the time needed to follow the climate conditions’ changes.
+人工番茄的结果则大不相同，与温室空气温度（和真实（樱桃）番茄温度）相比，人工番茄在升温和降温方面表现出显著的延迟。显然，番茄大小（以及热容量）对跟随气候条件变化所需的时间有很大影响。
 
-Additionally, during sunny days the temperature of the artificial tomato was up to $5 ^ { \circ } \mathrm { C }$ warmer than the air temperature when the real (cherry) tomato temperature hardly differed more than $1 ^ { \circ } \mathrm { C }$ from the greenhouse air temperature. Additionally, during those days there was a big temperature difference between the top 2 and lower 3 artificial tomatoes, demonstrating the effect of direct sun radiation on tomato temperature (Figure 3).
+此外，在晴天，人工番茄的温度比空气温度高达$5^{\circ}\mathrm{C}$，而真实（樱桃）番茄的温度与温室空气温度的差异几乎不超过$1^{\circ}\mathrm{C}$。此外，在这些日子里，顶部2个和底部3个人工番茄之间存在很大的温度差异，展示了直接太阳辐射对番茄温度的影响（图3）。
 
-# DISCUSSION AND CONCLUSIONS
+# 讨论与结论
 
-A lot of data were gathered as part of the current research in order to make as clear as possible how the applied climate control actions affect the vertical temperature profile as well as whether additional energy input results in more favorable climate for crop growth. In general, it can be concluded that when significant heat input (radiation) at the top of the crop takes place it can be expected that the bottom of the crop will remain colder; this was clear both during the sunny period of the day and also during the dark illuminated period. These temperature differences were found to exceed $3 ^ { \circ } \mathrm { C }$ during sunny days and $1 ^ { \circ } \mathrm { C }$ during the illuminated dark period. In that case, it was found very difficult to create vertical air movement capable to transfer the heat from the top to the bottom of the crop. As a result the use of only the lower vertical circulation fans had no effect on the vertical temperature profile. The vertical temperature gradient becomes smaller by additional heat input at the bottom of the crop. It was found that during dark days when more intense use of the heating system took place, the temperature at the top and bottom were similar. Similar results were found during the illuminated dark period when the heating system was used more. In that case the VentilationJets were used to remove around the top of the crop almost as much energy as added by the heating system resulting in a homogeneous vertical temperature profile.
+本研究收集了大量数据，旨在尽可能清晰地展示所应用的气候控制措施如何影响垂直温度分布，以及额外的能量输入是否会导致更有利于作物生长的气候。总的来说，可以得出结论：当作物顶部有显著的热量输入（辐射）时，作物底部通常会保持较冷；这在白天的阳光照射期间和黑暗的照明期间都很明显。研究发现，在晴天期间，这种温度差异超过$3^{\circ}\mathrm{C}$，而在黑暗照明期间则超过$1^{\circ}\mathrm{C}$。在这种情况下，很难产生能够将热量从作物顶部传递到底部的垂直空气流动。因此，仅使用下部垂直循环风扇对垂直温度分布没有影响。通过在作物底部增加热量输入，垂直温度梯度会变小。研究发现，在阴天更密集使用加热系统时，顶部和底部的温度相似。在黑暗照明期间，当更多地使用加热系统时，也发现了类似的结果。在这种情况下，VentilationJets被用来去除作物顶部几乎与加热系统添加的相同数量的能量，从而形成了均匀的垂直温度分布。
 
-During the months when the VentilationJets were used about $2 6 \%$ (about $2 ~ \mathrm { m } ^ { 3 }$ gas) of the total daily use of the heating system took place at the moments that the artificial lights and VentilationJets were used. The amount of heat that was removed from the greenhouse by the VentilationJets equalled more or less the amount of heat added by the heating pipes. As a consequence a homogeneous vertical temperature profile was created. In other words, a more homogenous vertical temperature profile can be created by using more heat input from the pipes and more heat release by the VentilationJet. From an energy point of view this is not clever since theoretically, it looks like the same net energy balance could have been achieved almost without the heat removal from the VentilationJets and without the heat input from the heating system at the same time.
+在使用VentilationJets的月份中，加热系统总日使用量的大约$26\%$（约$2~\mathrm{m}^{3}$气体）发生在使用人工照明和VentilationJets的时刻。VentilationJets从温室中去除的热量大致等于加热管道添加的热量。因此，形成了均匀的垂直温度分布。换句话说，通过增加来自管道的热量输入和VentilationJet的热量释放，可以创建更均匀的垂直温度分布。从能源角度来看，这并不明智，因为理论上，似乎可以在不使用VentilationJets去除热量和同时不使用加热系统输入热量的情况下实现相同的净能量平衡。
 
-However, a more detailed observation of the relative humidity values (which was reaching or exceeding the maximum acceptable limits for growth and production of high quality tomatoes in greenhouses) during the period when the screens were deployed, makes clear that stopping the use of the VentilationJets without any other changes to the greenhouse equipment (screen type) or climate control (e.g., screen position, lighting, temperature setpoint) would result in big problems due to supra-optimal humidity levels (Figure 4).
+然而，对幕布展开期间相对湿度值（达到或超过温室中高质量番茄生长和生产的最大可接受限度）的更详细观察表明，在不改变温室设备（幕布类型）或气候控制（例如，幕布位置、照明、温度设定值）的情况下停止使用VentilationJets，会由于超优湿度水平而导致重大问题（图4）。
 
-Summarized the heat input from the pipes was used with the aim to lower the relative humidity. As a result the surplus of heat and humidity were removed by the VentilationJets and the vertical temperature profile was influenced both by the pipe heating and VentilationJets.
+总结来说，来自管道的热量输入旨在降低相对湿度。因此，多余的热量和湿度被VentilationJets去除，垂直温度分布同时受到管道加热和VentilationJets的影响。
 
-Additionally, scientific research has shown that for the same air temperature around the top of the crop, the presence or not of vertical temperature gradient (so lower air temperature around the bottom of the crop or maintaining the same temperature, respectively) has minimum effect on crop growth and fruit yield as most physiological processes such as assimilates production and partitioning are not affected (Qian et al., 2012, 2015).
+此外，科学研究表明，在作物顶部周围空气温度相同的情况下，是否存在垂直温度梯度（即作物底部周围空气温度较低或保持相同温度）对作物生长和果实产量的影响最小，因为大多数生理过程，如同化物的生产和分配，不会受到影响（Qian et al., 2012, 2015）。
 
-Summarizing, the current research has shown in details how climate control actions affect the vertical air temperature gradient and what the (energy) cost is to maintain a homogeneous temperature over the vertical dimension. It has been also explained when and how the applied by the grower climate control approach which can be characterized as a “high energy input-high energy output” approach, results in a homogeneous vertical temperature profile. It is a bit beyond the scope of the current research to examine whether and how much a homogeneous temperature distribution favors more crop growth and yield in comparison to a vertical temperature gradient, but based on published research data it can be noted that the vertical temperature gradients within certain limits will not have significant negative impact on crop growth only on fruit growth rate and size. However, it was also shown that even if the expected benefits in terms of crop growth and yield are not a strong argument for maintaining the applied climate control approach, the high demand for dehumidification does not allow big changes in the aforementioned strategy, unless an alternative way for dehumidification becomes available.
+总结来说，本研究详细展示了气候控制措施如何影响垂直空气温度梯度，以及维持垂直维度上均匀温度所需的（能源）成本。它还解释了种植者应用的气候控制方法（可被描述为"高能量输入-高能量输出"方法）何时以及如何导致均匀的垂直温度分布。虽然本研究范围之外的是检查均匀温度分布与垂直温度梯度相比是否以及在多大程度上有利于作物生长和产量，但基于已发表的研究数据，可以注意到在一定限度内的垂直温度梯度不会对作物生长产生显著的负面影响，只会影响果实的生长速度和大小。然而，研究也表明，即使作物生长和产量方面的预期收益不是维持所应用的气候控制方法的强有力论据，对除湿的高需求也不允许对上述策略进行重大改变，除非有替代的除湿方法可用。
 
 ![](images/5e6d40adb5615de3d2d3168d9a454157ab5ae13ba26c195828e8889b7800d712.jpg)  
-Figure 4. Greenhouse climate (air temperature and relative humidity) during the period that the VentilationJet was used.
+图4. 使用VentilationJet期间的温室气候（空气温度和相对湿度）。
+
+# 参考文献
+
+Balendonck, J., Sapounas, A.A., Kempkes, F., van Os, E.A., van der Schoor, R., van Tuijl, B.A.J., and Keizer, L.C.P. (2014). 使用无线传感器网络确定温室环境的气候异质性. Acta Hortic. 1037, 539–546 https://doi.org/10.17660/ActaHortic.2014.1037.67.   
+Qian, T., Dieleman, J.A., Elings, A., De Gelder, A., Van Kooten, O., and Marcelis, L.F.M. (2012). 半封闭温室中的垂直温度梯度：发生与影响. Acta Hortic. 927, 59–66 https://doi.org/ 10.17660/ActaHortic.2012.927.5.   
+Qian, T., Dieleman, J.A., Elings, A., De Gelder, A., and Marcelis, L.F.M. (2015). 番茄作物生长和发育对半封闭温室中垂直温度梯度的响应. J. Hortic. Sci. Biotechnol. 90 (5), 578– 584 https://doi.org/10.1080/14620316.2015.11668717.
 
 # Literature cited
 
