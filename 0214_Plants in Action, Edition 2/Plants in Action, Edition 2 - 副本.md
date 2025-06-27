@@ -1,61 +1,61 @@
-# About the textbook
+# 关于教材
 
-Welcome to **Plants in Action**. This online text book, produced by the Australian and New Zealand societies of plant sciences, makes high-quality, cutting-edge, peer-reviewed research freely available to users across the world.
+欢迎使用**植物在行动**。这本在线教材由澳大利亚和新西兰植物科学学会制作，为全球用户免费提供高质量、前沿的、经过同行评议的研究成果。
 
-**Edition 2, Plants in Action**. You are now on the home page of **Edition 2**. Ten of the original twenty chapters have been fully revised, as shown on the navigation panel.
+**第二版，植物在行动**。您现在正在**第二版**的主页上。原始二十章中的十章已完全修订，如导航面板所示。
 
-**Edition 1, Plants in Action** is also available free and on-line on the [Internet Archive's Wayback Machine](https://web.archive.org/web/20180208013803/http://plantsinaction.science.uq.edu.au/edition1/). Twenty chapters provide over a thousand illustrations designed for teaching that are easily downloaded.
+**第一版，植物在行动**也可在[互联网档案馆的Wayback Machine](https://web.archive.org/web/20180208013803/http://plantsinaction.science.uq.edu.au/edition1/)上免费在线获取。二十章提供了超过一千张专为教学设计的插图，易于下载。
 
-If you wish to contact the editorial team with queries or suggestions, please email the Australian Society of Plant Scientists: [admin@asps.org.au](mailto:admin@asps.org.au?subject=Plants%20in%20Action%20Second%20Edition). To use figures or text for non-commercial purposes, please acknowledge the source as: "Reproduced from Plants in Action, [http://plantsinaction.science.uq.edu.au](../../../index.html), published by the Australian Society of Plant Scientists." Reproduction of this material in another language or for commercial purposes requires permission.
+如果您想联系编辑团队进行查询或提出建议，请发送电子邮件至澳大利亚植物科学家学会：[admin@asps.org.au](mailto:admin@asps.org.au?subject=Plants%20in%20Action%20Second%20Edition)。如需将图片或文字用于非商业目的，请注明来源为："转载自植物在行动，[http://plantsinaction.science.uq.edu.au](../../../index.html)，由澳大利亚植物科学家学会出版。"在其他语言中复制此材料或用于商业目的需要获得许可。
 
-You can find a PDF version of each chapter [on the ASPS website](https://www.asps.org.au/plants-in-action-2nd-edition-pdf-files).
+您可以在[ASPS网站](https://www.asps.org.au/plants-in-action-2nd-edition-pdf-files)上找到每章的PDF版本。
 
-## Editorial committee
+## 编辑委员会
 
 ## [RanaMunnsC-115px.jpg]![](https://www.rseco.org/file/ranamunnsc-115pxjpg.html)
 
 ![](https://www.rseco.org/sites/plantsinaction.science.uq.edu.au/files/styles/editors/public/RanaMunnsC-115px093a.jpg?itok=b_WnRvQg)
 
-Professor Rana Munns is an honorary fellow at CSIRO Agriculture in Canberra, and professor in the School of Plant Biology, and the ARC Centre of Excellence in Plant Energy Biology, at the University of Western Australia. She uses physiological insights and molecular genetics to improve growth and yield of crop plants in dry or saline soils. Rana is a Fellow of the Australian Academy of Science, and an editor of PrometheusWiki, the plant methods wiki.
+Rana Munns教授是堪培拉CSIRO农业部的荣誉研究员，也是西澳大利亚大学植物生物学学院和ARC植物能量生物学卓越中心的教授。她利用生理学见解和分子遗传学来改善作物在干燥或盐碱土壤中的生长和产量。Rana是澳大利亚科学院院士，也是植物方法维基PrometheusWiki的编辑。
 
 ## [Susanne Schmidt2lt-115px.jpg]![](https://www.rseco.org/file/susanne-schmidt2lt-115pxjpg.html)
 
 ![](https://www.rseco.org/sites/plantsinaction.science.uq.edu.au/files/styles/editors/public/sites/plantsinaction.science.uq.edu.au/files/images/Susanne%20Schmidt2lt-115pxf315.jpg?itok=AB0Br7kA)
 
-Professor Susanne Schmidt is a researcher and educator at The University of Queensland and Alexander von Humboldt fellow. Susanne has a passion for ecophysiology and plant nutrition and leads a vibrant group researching plant-microbe-soil interactions. Fundamental to applied research addresses environmental problems at the interface of ecology and agriculture.
+Susanne Schmidt教授是昆士兰大学的研究员和教育工作者，也是亚历山大·冯·洪堡学者。Susanne对生态生理学和植物营养充满热情，领导着一个充满活力的研究小组，研究植物-微生物-土壤相互作用。从基础到应用的研究解决了生态学和农业交界处的环境问题。
 
 ## [beveridgeC.jpg]![](https://www.rseco.org/file/beveridgecjpg.html)
 
 ![](https://www.rseco.org/sites/plantsinaction.science.uq.edu.au/files/styles/editors/public/sites/plantsinaction.science.uq.edu.au/files/images/beveridgeC4a2a.jpg?itok=HYvhp_0g)
 
-Professor Christine Beveridge is a researcher and educator at The University of Queensland and current Future Fellow of the Australian Research Council. Christine’s research team uses advanced molecular, physiology and computer modelling technologies to understand how mobile plant signals and resources interact to control shoot and root architecture and development.
+Christine Beveridge教授是昆士兰大学的研究员和教育工作者，也是澳大利亚研究委员会现任未来学者。Christine的研究团队使用先进的分子、生理学和计算机建模技术来理解移动植物信号和资源如何相互作用来控制地上部和根系的架构和发育。
 
 ## [UlrikeMathesius\_cropped.jpg]![](https://www.rseco.org/file/ulrikemathesiuscroppedjpg.html)
 
 ![](https://www.rseco.org/sites/plantsinaction.science.uq.edu.au/files/styles/editors/public/UlrikeMathesius_cropped9c42.jpg?itok=qizYAhqp)
 
-Professor Ulrike Mathesius is a researcher and educator at The Australian National University. Ulrike is interested in extending the use of beneficial microbes in agriculture. Her group is using molecular and biochemical tools to understand the signals that control the interactions of roots with symbiotic and parasitic microbes.
+Ulrike Mathesius教授是澳大利亚国立大学的研究员和教育工作者。Ulrike对扩展有益微生物在农业中的使用感兴趣。她的团队正在使用分子和生化工具来理解控制根系与共生和寄生微生物相互作用的信号。
 
-# Contents Page
+# 目录页
 
-*   [About the textbook](../../../content/about.html)
-    *   [Contents Page](../../../content/contents-page.html)
-    *   [Chapter 1 - Light use and leaf gas exchange](../../../content/chapter-1-light-use-and-leaf-gas-exchange.html)
-        *   [1.1 - Leaf anatomy, light interception and gas exchange](../../../content/11-leaf-anatomy-light-interception-and-gas-exchange.html)
-            *   [1.1.1 - Leaf Structure](../../../content/111-leaf-structure.html)
-            *   [1.1.2 - Light absorption](../../../content/112-light-absorption.html)
-            *   [1.1.3 - CO2 diffusion to chloroplasts](../../../content/113-co2-diffusion-chloroplasts.html)
-            *   [1.1.4 - Light and CO2 effects on leaf photosynthesis](../../../content/114-light-and-co2-effects-leaf-photosynthesis.html)
-        *   [Case Study 1.1 - Development of _A:Ci_ curves](../../../content/case-study-11-development-aci-curves.html)
-        *   [1.2 - Chloroplasts and energy capture](../../../content/12-chloroplasts-and-energy-capture.html)
-            *   [1.2.1 - Chloroplast structure and composition](../../../content/121-chloroplast-structure-and-composition.html)
-            *   [1.2.2 - Chlorophyll absorption and photosynthetic action spectra](../../../content/122-chlorophyll-absorption-and-photosynthetic-action-spectra.html)
-            *   [1.2.3 - Cooperative photosystems and a ‘Z’ scheme for electron flow](../../../content/123-cooperative-photosystems-and-%e2%80%98z%e2%80%99-scheme-electron-flow.html)
-            *   [1.2.4 - ATP synthesis](../../../content/124-atp-synthesis.html)
-            *   [1.2.5 - Chlorophyll fluorescence](../../../content/125-chlorophyll-fluorescence.html)
-        *   [Case Study 1.2 - Five chlorophylls and photosynthesis](../../../content/case-study-12-five-chlorophylls-and-photosynthesis.html)
-        *   [1.3 - Concluding remarks](../../../content/13-concluding-remarks.html)
-        *   [1.4 Further reading](../../../content/14-further-reading.html)
+*   [关于教材](../../../content/about.html)
+    *   [目录页](../../../content/contents-page.html)
+    *   [第1章 - 光利用与叶片气体交换](../../../content/chapter-1-light-use-and-leaf-gas-exchange.html)
+        *   [1.1 - 叶片解剖学、光截获与气体交换](../../../content/11-leaf-anatomy-light-interception-and-gas-exchange.html)
+            *   [1.1.1 - 叶片结构](../../../content/111-leaf-structure.html)
+            *   [1.1.2 - 光吸收](../../../content/112-light-absorption.html)
+            *   [1.1.3 - CO2向叶绿体的扩散](../../../content/113-co2-diffusion-chloroplasts.html)
+            *   [1.1.4 - 光和CO2对叶片光合作用的影响](../../../content/114-light-and-co2-effects-leaf-photosynthesis.html)
+        *   [案例研究1.1 - A:Ci曲线的发展](../../../content/case-study-11-development-aci-curves.html)
+        *   [1.2 - 叶绿体与能量捕获](../../../content/12-chloroplasts-and-energy-capture.html)
+            *   [1.2.1 - 叶绿体结构与组成](../../../content/121-chloroplast-structure-and-composition.html)
+            *   [1.2.2 - 叶绿素吸收与光合作用作用光谱](../../../content/122-chlorophyll-absorption-and-photosynthetic-action-spectra.html)
+            *   [1.2.3 - 协同光系统与电子流的'Z'方案](../../../content/123-cooperative-photosystems-and-%e2%80%98z%e2%80%99-scheme-electron-flow.html)
+            *   [1.2.4 - ATP合成](../../../content/124-atp-synthesis.html)
+            *   [1.2.5 - 叶绿素荧光](../../../content/125-chlorophyll-fluorescence.html)
+        *   [案例研究1.2 - 五种叶绿素与光合作用](../../../content/case-study-12-five-chlorophylls-and-photosynthesis.html)
+        *   [1.3 - 结论性评述](../../../content/13-concluding-remarks.html)
+        *   [1.4 延伸阅读](../../../content/14-further-reading.html)
     *   [Chapter 2 - Carbon dioxide assimilation and respiration](../../../content/chapter-2-carbon-dioxide-assimilation-and-respiration.html)
         *   [2.1 - C3 photosynthesis](../../../content/21-c3-photosynthesis.html)
             *   [2.1.1 - Photosynthetic carbon reduction](../../../content/211-photosynthetic-carbon-reduction.html)
