@@ -45,15 +45,18 @@ LED(LED封装)的基本效率是以下三个子效率的乘积：
 
 数据来源于公司网站(见下文)。从效率到光子效能的转换取决于光谱分布
 
-![](images/985a21afbdd490c3833473f53fb0b2452589c21e7e796a471c06f01a6386790d.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/985a21afbdd490c3833473f53fb0b2452589c21e7e796a471c06f01a6386790d.jpg?raw=true)
+  
 图1 色温与蓝光光子百分比(左轴)的一般关系，以及色温对光子效能的影响(右轴)。具体数值因制造商而异。本图中的光子效能数据是在$25^\circ C$结温和$150\mathsf{mA}$驱动电流下测得，若改变这些参数，效能值将发生变化(见下文)。
 
 荧光粉涂层密度增加和红光荧光粉材料用量增加会降低效率。含约$30\%$蓝光光子的$6500\mathrm{K}$ LED(日光)的光子输出可达非荧光粉转换蓝光LED的$95\%$，而含$10\%$蓝光光子的暖白光LED该值会降至$80\%$。此外，随着白光LED光输出增加，荧光粉效率会下降，这是由于荧光粉转换过程中的转换损耗、能量损耗和光学损耗所致。
 
-![](images/1bf97b1f85629f31b894d2bcdf492ba01418370548ce81429fe9b6e1d78d819f.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/1bf97b1f85629f31b894d2bcdf492ba01418370548ce81429fe9b6e1d78d819f.jpg?raw=true)
+  
 图2 $25^\circ C$结温下驱动电流对光子效能的影响。图中虚线表示低驱动电流下测试数据不足。然而LED灯具中会使用低驱动电流(如$65\mathsf{mA}$)。根据普朗克方程$\mathrm{E}=$hc/波长)，蓝光光子理论最大效能低于红光光子。中心波长450nm的蓝光光子可提供$3.76\mu\mathrm{mol J}^{-1}$，而660nm红光光子可提供$5.52\mu\mathrm{mol J}^{-1}$。这更多是光子本身的特性而非制造它们的LED的特性。
 
-![](images/1203ae9add2bf601100b046805cbf594618a58dd4494a6e6435e73ae12c83114.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/1203ae9add2bf601100b046805cbf594618a58dd4494a6e6435e73ae12c83114.jpg?raw=true)
+  
 图3 结温对光子效能的影响。注意较高驱动电流会提高结温。图中虚线表示低于$25^\circ C$的温度(即低于环境温度)，将温度降至环境以下需要消耗能量。
 
 # 电流衰减
@@ -66,7 +69,8 @@ LED设计用于特定电流范围内工作。适中的驱动电流密度可实�
 
 结温指二极管实际工作温度。LED效能报告有两种温度标准：$25^\circ C$和$85^\circ C$。当温度从25升至$85^\circ C$时，效能下降约$10\%$(热衰减)。红光LED的热衰减通常比蓝光LED更严重。
 
-![](images/030b6b951112d01209a8e831f9206c9574678135ec44efb25248a66ef8babc13.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/030b6b951112d01209a8e831f9206c9574678135ec44efb25248a66ef8babc13.jpg?raw=true)
+  
 图4 蓝光与红光LED按$20/80\%$比例组合的历史、当前及预测封装效能(两者加权平均值)。该图将LED性能限制于特定电流和温度条件，实际当前技术点可能高于图示值。
 
 # 效能预测
@@ -128,7 +132,8 @@ Morrow论述了LED对园艺照明的意义并回顾了该技术的早期应用20
 
 灯具中LED的结温取决于驱动电流、环境温度和灯具的散热（热管理），但通常在$85^\circ C^{53}$左右。更好的热管理可能会增加灯具成本，但也能提高LED的效能和寿命（图5）。
 
-![](images/54a537d2ba08d194d89934f953c4a2f5bd0552c7869c53363542c9716052fcfd.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/54a537d2ba08d194d89934f953c4a2f5bd0552c7869c53363542c9716052fcfd.jpg?raw=true)
+  
 图5 基于温度的LED长期衰减示例。LED在较低温度下工作时衰减较慢。LED的具体衰减率取决于颜色、电流工作状态、封装类型和LED品质以及温度。图中颜色代表温度而非LED颜色
 
 [LED会随时间和电流密度而衰减。L70是一个指标，表示灯具输出为原始输出$70\%$的时间（园艺产品有时称为Q70）。LED灯具的典型L70为$50,000\mathrm{h}$。随着LED和灯具老化，效能会下降；高结温会加剧这个问题。不同制造商的灯具老化速率差异很大。大多数制造商基于标准LED封装测试——IES LM-80（可外推为灯具流明维持率）来表征其灯具寿命（L70、L90、Q70或Q90）。基于LED衰减的灯具流明维持率预测不能超过LED测试时长的六倍，因此对于$60,000\mathrm{h}$的衰减寿命声明，LED必须经过$10,000\mathrm{h}$的测试。许多声称延长寿命的灯具超出了基于LED测试允许的六倍外推。基于LED衰减的灯具寿命也不包括灯具中的光学损耗机制和高温导致的LED加速老化。此外，典型的寿命声明不考虑LED驱动器的灾难性故障，后者通常在LED达到L70之前就已失效。]
@@ -158,7 +163,8 @@ Morrow论述了LED对园艺照明的意义并回顾了该技术的早期应用20
 
 如果使用最佳LED，在最佳条件下，含有大致相等比例红光和白光LED的广谱灯具可实现3.4的效能（图6）。远红光光子引起的叶片扩展增加意味着，对于生菜和其他叶菜类作物，添加高达$30\%$的远红光LED可能具有成本效益35。
 
-![](images/c14595be6d9fbbca4c1ca389037260ab67c6bab0c91c33eef9eada82497ad388.jpg)  
+![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0237_Kusuma%20%E7%AD%89%20-%20From%20physics%20to%20fixtures%20to%20food%20Current%20and%20potential%20LED%20efficacy/images/c14595be6d9fbbca4c1ca389037260ab67c6bab0c91c33eef9eada82497ad388.jpg?raw=true)
+  
 图6 一种建议的高效能灯具配置。Y轴假设输入功率为1瓦特
 
 # 典型灯具效能
