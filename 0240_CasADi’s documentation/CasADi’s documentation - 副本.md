@@ -2659,33 +2659,33 @@ nx = 0, nz = 0, nq = 0, ny = 0, np = 0, nc = 0, nd = 0, nw = 0, nu = 0
 
 CasADi - 2025-03-29 19:11:36 WARNING("DaeBuilder::pre has not been implemented: Returning identity mapping") \[.../casadi/core/dae\_builder.cpp:769\]
 
-For more information about the hybrid support in CasADi, we refer to the implementation paper:
+有关CasADi中混合支持的更多信息，我们参考实现论文：
 
 [\[1\]](#casadi-hybrid).
 
-### 7.7. Reformulating a model[¶](#reformulating-a-model "Permalink to this heading")
+### 7.7. 模型重构[¶](#reformulating-a-model "Permalink to this heading")
 
-Instances of the `DaeBuilder` class are mutable and it is possible, with several restrictions, to change the formulation after creation. In particular, it is possible to change the causality or variability of a variable, as long as the change is possible with the current set of model equations. In particular, it is possible to remove an output variable yyy by changing its causality to local. An input variable uuu can be treated as a parameter ppp or a constant ccc by changing the variability to tunable or fixed, respectively (the causality will be automatically updated to “parameter” in this case). In addition, it is always possible to reorder the variables in a category in an arbitrary way – by default the ordering within a category will match the ordering of the model variables.
+`DaeBuilder`类的实例是可变的，在创建后可以有限制地改变其公式化表达。特别是可以改变变量的因果关系(causality)或可变性(variability)，只要这种改变在当前模型方程集合下是可能的。具体来说，可以通过将输出变量yyy的因果关系改为local来移除它。输入变量uuu可以通过将其可变性分别改为tunable或fixed来视为参数ppp或常量ccc（在这种情况下因果关系将自动更新为"parameter"）。此外，始终可以任意方式重新排列类别中的变量——默认情况下类别内的排序将与模型变量的排序匹配。
 
-If a `DaeBuilder` instance has been created symbolically (as opposed as from a standard FMU), additional manipulations such as the elimination of dependent variables, BLT reordering, index reduction, etc. is possible. Some of these features have not been actively maintained or continuously tested, but may be revived with limited work of the C++ source code.
+如果`DaeBuilder`实例是符号化创建的（而不是从标准FMU创建的），则可以进行额外的操作，如消除依赖变量、BLT重排序、索引约简等。其中一些功能尚未积极维护或持续测试，但可能通过有限的C++源代码工作重新启用。
 
-### 7.8. Evaluating model equations, function factory[¶](#evaluating-model-equations-function-factory "Permalink to this heading")
+### 7.8. 模型方程评估，函数工厂[¶](#evaluating-model-equations-function-factory "Permalink to this heading")
 
-The evaluation of model equations in a `DaeBuilder` instance follows a somewhat different paradigm than other tools capable of evaluating FMUs such as FMPy or PyFMI. In general, we only use setters (`DaeBuilder.set`) to set constants (ccc) or _initial_/_default_ values for other variables. For the evaluation, `DaeBuilder` relies on a _function factory_ where the user creates differentiable CasADi function objects by providing a function name as well as a list of inputs and a list of outputs. The following example shows how to create a function named `f` with three (vector-valued) inputs, xxx, uuu and ppp, and one (vector-valued) output, fodefodef\_{\\text{ode}}:
+`DaeBuilder`实例中模型方程的评估遵循与FMPy或PyFMI等其他能评估FMU的工具略有不同的范式。通常，我们只使用setter(`DaeBuilder.set`)来设置常量(ccc)或其他变量的_初始_/_默认_值。对于评估，`DaeBuilder`依赖于_function factory_，用户通过提供函数名称以及输入列表和输出列表来创建可微的CasADi函数对象。以下示例展示如何创建一个名为`f`的函数，具有三个(向量值)输入xxx、uuu和ppp，以及一个(向量值)输出fodefodef\_{\\text{ode}}:
 
 f \= dae.create('f',\['x','u','p'\],\['ode'\])
 
 f \= dae.create('f',{'x','u','p'},{'ode'});
 
-Similarly, we can create an output function named `h` as follows:
+类似地，我们可以创建一个名为`h`的输出函数如下：
 
 h \= dae.create('h',\['x','u','p'\],\['y'\])
 
 h \= dae.create('h',{'x','u','p'},{'y'});
 
-The names of inputs and outputs correspond to the categories outlined in [Section 7.1](#sec-model-variables) and [Section 7.2](#sec-model-equations), respectively. Constants (ccc) are never allowed as mentioned above. Dependent parameters (ddd) and dependent variables (www) can be _either_ inputs or outputs (but not both). If they are absent from inputs (whether or not they are defined as outputs), they will be substituted out from the expressions during function construction. Outputs (yyy) and other purely dependent variables are only allowed as outputs. During creation, the function factory will save the current state of the (mutable) `DaeBuilder` instance and the created function will not be impacted by any subsequent changes to or even deletion of the `DaeBuilder` instance. The created functions are thus immutable (with very few exceptions), similar to all other functions in CasADi.
+输入和输出的名称分别对应[7.1节](#sec-model-variables)和[7.2节](#sec-model-equations)中概述的类别。如前所述，常量(ccc)永远不允许作为输入或输出。依赖参数(ddd)和依赖变量(www)可以_选择_作为输入或输出（但不能同时作为两者）。如果它们不在输入中（无论是否定义为输出），在函数构建过程中它们将被从表达式中替换掉。输出变量(yyy)和其他纯依赖变量只能作为输出。在创建过程中，函数工厂会保存(mutable)`DaeBuilder`实例的当前状态，创建的函数不会受到后续对`DaeBuilder`实例的任何修改甚至删除的影响。因此创建的函数是不可变的（极少数例外情况），与CasADi中所有其他函数类似。
 
-We may also use CasADi’s naming conventions for derivative functions to include e.g. Jacobian blocks in the function output. The following example creates a function named `J` with three (vector-valued) inputs, xxx, uuu and ppp, and one (matrix-valued) output corresponding to the Jacobian of fodefodef\_{\\text{ode}} with respect to xxx:
+我们还可以使用CasADi的导数函数命名约定，在函数输出中包含例如雅可比矩阵块。以下示例创建了一个名为`J`的函数，具有三个（向量值）输入xxx、uuu和ppp，以及一个（矩阵值）输出，对应于fodefodef\_{\\text{ode}}关于xxx的雅可比矩阵：
 
 J \= dae.create('J',\\
      \['x','u','p'\], \['jac\_ode\_x'\])
@@ -2693,9 +2693,33 @@ J \= dae.create('J',\\
 J \= dae.create('J',...
      {'x','u','p'} {'jac\_ode\_x'});
 
-We refer to the notebook fmu\_demo.ipynb for more examples on how to use the function factory, including how to define and obtain (non-differentiable) auxiliary outputs during evaluation.
+我们参考fmu\_demo.ipynb笔记本获取更多关于如何使用函数工厂的示例，包括如何在评估过程中定义和获取（不可微的）辅助输出。
 
-Footnotes
+脚注
+
+\[[1](#id10)\]
+
+Joel Andersson, James Goppert, [CasADi中用于Modelica和FMI的仿真和灵敏度分析的事件支持](https://doi.org/10.3384/ecp20799) , 美国Modelica会议论文集 2024, 斯托尔斯, 康涅狄格州, 美国, 2024年10月14-16日
+
+\[[2](#id8)\]
+
+Joel Andersson, [CasADi中功能模型单元的导入与导出](https://doi.org/10.3384/ecp204321) , 第15届国际Modelica会议论文集 2023, 亚琛, 2023年10月9-11日
+
+\[3\] ([1](#id1),[2](#id2),[3](#id3))
+
+Modelica协会, [功能模型接口规范, 3.0.2版](https://fmi-standard.org/docs/3.0.2/)
+
+\[4\] ([1](#id4),[2](#id9))
+
+Modelica协会, [Modelica(R) - 系统建模的统一面向对象语言规范, 3.6版](https://specification.modelica.org/maint/3.6/)
+
+\[5\] ([1](#id5),[2](#id6))
+
+Peter Harman, Werther Kai, Gerd Kurzbach, Oliver Lenord, Hans Olsson, Michael Schellenberger, Martin Sjölund, Henrik Tidefelt, [Modelica变更提案 MCP-0031 基础Modelica和MLS模块化](https://github.com/modelica/ModelicaSpecification/tree/MCP/0031/RationaleMCP/0031)
+
+\[[6](#id7)\]
+
+[https://github.com/CogniPilot/rumoca\_parser](https://github.com/CogniPilot/rumoca_parser)
 
 \[[1](#id10)\]
 
