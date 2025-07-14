@@ -378,6 +378,40 @@ Ce projet de maîtrise a fait l'objet de quatre publications avec révision par 
   
 图1. 论文整体方法论框架
 
+~~~mermaid
+graph TD
+    subgraph "研究主题和方法现状"
+        direction LR
+        Ch1["<b>第1章</b><br>魁北克能源消耗<br>• 温室行业"]
+        Ch2["<b>第2章</b><br>温室园艺能源效率<br>• 性能指标<br>• 节能策略<br>• 人工照明"]
+        Ch3["<b>第3章</b><br>模型描述<br>• 模拟方法<br>• 方法类型<br>• 整体方法论"]
+    end
+
+    subgraph "模拟模型"
+        direction LR
+        Ch4["<b>第4章</b><br>灯具模型参数分析<br>• 敏感性分析<br>• 灯具影响<br>• 能源与产量"]
+    end
+
+    subgraph "模拟与结果"
+        direction LR
+        Ch5["<b>第5章</b><br>效率措施和本地环境影响<br>• 照明与建筑特性<br>• 能源、产量和成本"]
+        Ch6["<b>第6章</b><br>气候变化影响<br>• 当前与未来气候<br>• 能源与产量<br>• 适应策略"]
+    end
+
+    %% 定义连接关系
+    Ch1 --> Ch2 --> Ch3 --> Ch4 --> Ch5 --> Ch6
+
+    %% 定义不同组的样式
+    classDef blue_group fill:#e6f2ff,stroke:#3b82f6,stroke-width:2px,color:#000
+    classDef green_group fill:#e8f5e9,stroke:#4caf50,stroke-width:2px,color:#000
+    classDef orange_group fill:#fff3e0,stroke:#fb8c00,stroke-width:2px,color:#000
+    
+    %% 应用样式到节点
+    class Ch1,Ch2,Ch3 blue_group
+    class Ch4 green_group
+    class Ch5,Ch6 orange_group
+~~~
+
 # 第1章 魁北克能源消费
 
 第1章 能源消耗
@@ -501,6 +535,51 @@ $$
 2.4.1 结构设计传统温室设计普遍存在保温性能较差的问题，典型温室围护结构造成的能量损失占总能耗的20%至40%[30]。图2.1展示了温室设计的主要组成部分。从能耗角度考虑，温室设计可分为三大模块：结构设计、通风系统设计和照明系统选择。本节将详细分析结构设计要素。
 
 ![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0242_Tr%C3%A9panier%20-%202024%20-%20Dynamic%20modeling%20of%20energy%20consumption%20and%20yield/images/df67d74c215549a34f31482f16bfb5e378b80ecb398e4f7747fa49c763012e1c.jpg?raw=true)
+
+~~~mermaid
+graph LR
+    A[温室设计]
+    
+    A --> B[结构设计]
+    A --> C[通风系统设计]
+    A --> D[照明系统选择]
+
+    B --> B1[朝向]
+    B --> B2[形状]
+    B --> B3[覆盖材料]
+
+    B1 --> B1a[东西向]
+    B1 --> B1b[南北向]
+
+    B2 --> B2a[等坡温室Even span]
+    B2 --> B2b[不等坡温室Uneven span]
+    B2 --> B2c[圆顶温室Dome]
+    B2 --> B2d[拱形温室Quonset]
+    B2 --> B2e[葡萄园温室Vinery]
+
+    B3 --> B3a[塑料薄膜]
+    B3 --> B3b[玻璃]
+    B3 --> B3c[聚碳酸酯板]
+
+    C --> C1[自然通风]
+    C --> C2[机械通风]
+
+    D --> D1[高压钠灯]
+    D --> D2[LED灯]
+
+    %% 样式定义
+    classDef blue fill:#5b9bd5,stroke:#4a86c8,color:white,rx:5,ry:5
+    classDef dark_green fill:#70ad47,stroke:#5a8e38,color:white,rx:5,ry:5
+    classDef light_green fill:#a9d18e,stroke:#8db671,color:black,rx:5,ry:5
+    classDef yellow fill:#fee599,stroke:#fddc76,color:black,rx:5,ry:5
+    classDef orange fill:#f8cbad,stroke:#f5b68b,color:black,rx:5,ry:5
+
+    class A blue
+    class B dark_green
+    class B1,B1a,B1b,B2,B2a,B2b,B2c,B2d,B2e,B3,B3a,B3b,B3c light_green
+    class C,C1,C2 yellow
+    class D,D1,D2 orange
+~~~
   
 图2.1. 温室设计各要素示意图(改编自[30])
 
@@ -533,6 +612,51 @@ $$
 随着化石燃料价格上涨及环保意识增强，温室种植者日益关注替代能源[31]。近年来，可再生能源在传统温室结构中展现出巨大整合潜力[30]。太阳能板、风力涡轮机等可再生能源可有效抵消温室及CEA设施能耗，为照明、通风等电气系统供电。图2.2汇总了全球主要研究的可再生能源类型，显示太阳能与地热能是当前两大主流选择，此外能源集成系统也是可持续能源技术的重要方向。
 
 ![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0242_Tr%C3%A9panier%20-%202024%20-%20Dynamic%20modeling%20of%20energy%20consumption%20and%20yield/images/512833b4d78de737b8ecbcfe772b61f3acc07a131d297aa2f357d1d278cd294a.jpg?raw=true)
+
+~~~mermaid
+graph LR
+    A[可持续能源技术]
+
+    A --> B[太阳能系统]
+    A --> C[地热系统]
+    A --> D[多能互补系统]
+
+    B --> B1[光伏组件]
+    B --> B2[太阳能集热器]
+
+    B1 --> B1a[布局方式]
+    B1 --> B1b[光伏组件节能效率]
+
+    B1a --> B1a1[侧面]
+    B1a --> B1a2[屋顶]
+    B1a --> B1a3[直线排列]
+    B1a --> B1a4[棋盘式排列]
+
+    C --> C1[热泵]
+    C1 --> C1a[水平地源热泵]
+    C1 --> C1b[垂直地源热泵]
+    C1 --> C1c[太阳能辅助吸收式热泵]
+
+    D --> D1[光伏光热一体化组件]
+    D --> D2[太阳能集热器与热泵结合]
+
+    %% 样式定义
+    classDef blue fill:#5b9bd5,stroke:#4a86c8,color:white,rx:5,ry:5
+    classDef d_green fill:#70ad47,stroke:#5a8e38,color:white,rx:5,ry:5
+    classDef l_green fill:#a9d18e,stroke:#8db671,color:black,rx:5,ry:5
+    classDef yellow fill:#ffc000,stroke:#d9a300,color:black,rx:5,ry:5
+    classDef l_yellow fill:#fee599,stroke:#fddc76,color:black,rx:5,ry:5
+    classDef orange fill:#ed7d31,stroke:#c66829,color:white,rx:5,ry:5
+    classDef l_orange fill:#f8cbad,stroke:#f5b68b,color:black,rx:5,ry:5
+
+    class A blue
+    class B d_green
+    class B1,B2,B1a,B1b,B1a1,B1a2,B1a3,B1a4 l_green
+    class C yellow
+    class C1,C1a,C1b,C1c l_yellow
+    class D orange
+    class D1,D2 l_orange
+~~~
   
 图2.2. 温室可持续能源技术概览(改编自[30])
 
@@ -597,6 +721,43 @@ $$
 改进控制策略是减少温室总能耗的有效途径。计算机化气候控制可实现自动气候管理，即根据作物需求与外部气候条件调节温度、湿度和CO₂等参数。气候计算机通过复杂控制算法响应作物管理指令，优化供热并调节内外空气交换率（通风）。冬季采用优质气候策略可降低10%的能源成本[15]。针对CEA或温室的能耗优化存在多种控制策略，主要类别如图2.3所示。
 
 ![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0242_Tr%C3%A9panier%20-%202024%20-%20Dynamic%20modeling%20of%20energy%20consumption%20and%20yield/images/0d89b39710c95f0e53190c098495df925f9e2ee542de4795a6ac4fd7e2be2d8e.jpg?raw=true)
+
+~~~mermaid
+graph LR
+    A[温室设计]
+
+    A --> B[监测系统]
+    A --> C[带控制算法的控制器]
+    A --> D[控制策略的节能效率]
+
+    B --> B1[传感器布局]
+    B --> B2[无线通信技术]
+
+    C --> C1[控制算法]
+    C --> C2[控制性能]
+
+    C1 --> CA1[PID控制]
+    C1 --> CA2[MPC控制]
+    C1 --> CA3[模糊控制]
+    C1 --> CA4[神经网络]
+    C1 --> CA5[最优控制]
+    C1 --> CA6[混合控制]
+
+    %% 样式定义
+    classDef blue fill:#5b9bd5,stroke:#4a86c8,color:white,rx:5,ry:5
+    classDef d_green fill:#70ad47,stroke:#5a8e38,color:white,rx:5,ry:5
+    classDef l_green fill:#a9d18e,stroke:#8db671,color:black,rx:5,ry:5
+    classDef yellow fill:#ffc000,stroke:#d9a300,color:black,rx:5,ry:5
+    classDef l_yellow fill:#fee599,stroke:#fddc76,color:black,rx:5,ry:5
+    classDef orange fill:#ed7d31,stroke:#c66829,color:white,rx:5,ry:5
+
+    class A blue
+    class B d_green
+    class B1,B2 l_green
+    class C yellow
+    class C1,C2,CA1,CA2,CA3,CA4,CA5,CA6 l_yellow
+    class D orange
+~~~
   
 图2.3. 温室不同控制策略示意图（改编自[30]）
 
@@ -715,6 +876,64 @@ LED是由半导体材料构成的固态发光器件，可发射250nm至1000nm以
 构建稳健模型需明确定义温室几何结构与物理参数，综合考虑气流、水分、CO₂交换及热传递过程。图3.1总结了建模需考虑的关键要素。
 
 ![](https://github.com/duirixuanyan/report-images-2025.06.26/blob/main/0242_Tr%C3%A9panier%20-%202024%20-%20Dynamic%20modeling%20of%20energy%20consumption%20and%20yield/images/6a8d1b680350a2e775d3906e490e5a2eea6037c3611a283c7ca5ee4ebe3059ef.jpg?raw=true)
+
+~~~mermaid
+graph TD
+    A[建模] --> B[几何结构]
+    B --> C[尺寸]
+    B --> D["温室的<br>物理参数"]
+    D --> E["温度、流速、<br>作物特性等"]
+    
+    D --> F[流体]
+    subgraph FluidGroup
+        direction LR
+        F1["空气流动<br>温度"]
+        F2["水蒸气<br>湿度"]
+        F3[二氧化碳]
+    end
+    F --> F1
+    F --> F2
+    F --> F3
+    
+    D --> G[热力学]
+    
+    subgraph ThermalGroup
+        direction LR
+        G1[太阳辐射]
+        G2["作物反应<br>光合作用<br>蒸腾作用"]
+        G3["加热与冷却"]
+    end
+    G --> G1
+    G --> G2
+    G --> G3
+
+    ThermalGroup --> H["<b>热传递(传导、对流和渗透)</b><br>• 热增益(辐射、加热设备等)<br>• 热损失(辐射、土壤、蒸发等)"]
+
+    %% 样式定义
+    classDef blue fill:#5b9bd5,stroke:#4a86c8,color:white
+    classDef d_green fill:#70ad47,stroke:#5a8e38,color:white
+    classDef l_green fill:#a9d18e,stroke:#8db671,color:black
+    classDef orange fill:#ed7d31,stroke:#c66829,color:white
+    classDef l_orange fill:#f8cbad,stroke:#f5b68b,color:black
+    classDef yellow fill:#ffc000,stroke:#d9a300,color:black
+    classDef l_yellow fill:#fee599,stroke:#fddc76,color:black
+    classDef grey fill:#f2f2f2,stroke:#d9d9d9,color:black
+
+    %% 样式分配
+    class A blue
+    class B d_green
+    class C l_green
+    class D orange
+    class E l_orange
+    class F,G yellow
+    class F1,F2,F3,G1,G2,G3 l_yellow
+    class H grey
+
+    %% 子图样式设置(隐藏边框和标题)
+    style FluidGroup fill:none,stroke:none
+    style ThermalGroup fill:none,stroke:#aaa,stroke-width:1px
+    
+~~~
   
 图3.1 温室建模要素示意图
 
