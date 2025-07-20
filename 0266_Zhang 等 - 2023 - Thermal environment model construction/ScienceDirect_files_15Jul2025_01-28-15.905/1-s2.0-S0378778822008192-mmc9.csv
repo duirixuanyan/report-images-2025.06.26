@@ -1,0 +1,7 @@
+Table 9 Correlation analysis of physical quantities,,,,
+Coefficient of determination ,Ps,Piw,Pr,Psw
+R2,,,,
+Ps,1,0.6729,0.9362,0.9683
+Piw,0.6729,1,0.4663,0.7934
+Pr,0.9362,0.4663,1,0.8621
+Psw,0.9683,0.7934,0.8621,1

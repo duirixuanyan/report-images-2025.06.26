@@ -1,0 +1,15 @@
+Table 3 physical quantity dimensional analysis,,,
+Physical quantity,Symbol,Unit,Dimensional
+Solar irradiance,E,W¡¤m-2,MT-3
+Heat flux of greenhouse energy storage wall,qsw,W¡¤m-2,MT-3
+Heat flux of greenhouse front roof,qr,W¡¤m-2,MT-3
+Heat flux of internal surface of greenhouse insulation wall,qiw,W¡¤m-2,MT-3
+Solar radiation acceptance area of greenhouse,Ss,m2,L2
+Area of greenhouse energy storage wall,Ssw,m2,L2
+Area of greenhouse front roof,Sr,m2,L2
+Area of greenhouse insulation wall,Siw,m2,L2
+Indoor air temperature,Ti,¡æ,q
+Temperature of energy storage wall,Tsw,¡æ,q
+Outdoor air temperature,To,¡æ,q
+Indoor air temperature volume,Vi,m3,L3
+,,,

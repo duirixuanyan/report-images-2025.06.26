@@ -1,0 +1,9 @@
+﻿Table 1. Physical parameters of greenhouse building materials,,,,,
+Material,Heat storage coefficient,Thermal diffusivity,Thermal conductivity,Thickness,Transmissivity
+,W/(m2·k),mm2/s,W/(m·k),m,%
+Blockboard,0.13,1.964,0.261,0.017,-
+Polyurethane foam,0.17,0.401,0.067,0.1,-
+Concrete energy storage wall,0.52,2.543,1.322,0.08,-
+Glass,0.22,4.92,1.079,0.005,86
+Insulation quilt,0.15,0.854,0.128,0.03,-
+,,,,,

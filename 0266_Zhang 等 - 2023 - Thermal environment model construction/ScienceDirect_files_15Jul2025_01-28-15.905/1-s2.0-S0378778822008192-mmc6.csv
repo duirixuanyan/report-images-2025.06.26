@@ -1,0 +1,10 @@
+Table 6 Analysis of physical dimensional after merging,,,
+Physical quantity,Symbol,Unit,Dimensional
+Solar radiation power of greenhouse,Ps,W,L2MT-3
+Heat storage and release power of energy storage wall,Psw,W,L2MT-3
+Heat conductive power of greenhouse front roof,Pr,W,L2MT-3
+Heat conductive power of internal surface of greenhouse insulation wall,Piw,W,L2MT-3
+Indoor air temperature,Ti,¡æ,q
+Temperature of energy storage wall,Tsw,¡æ,q
+Outdoor air temperature,To,¡æ,q
+,,,

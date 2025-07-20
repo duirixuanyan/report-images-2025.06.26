@@ -1,0 +1,33 @@
+1
+1.000 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+0. 50. 10000.
+1
+1.000 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+0. 2000. 3000.
+0
+0.030 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+1
+0.010 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+1
+0.003 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+1
+0.001 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+1
+0.0003 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+1
+0.0001 1000. 7.5 15.6 .0 .0 .0 77.0 .0
+1500. 50. 10000.
+0
+
+Data input file for RADCAL
+
+line 1:  number of homogeneous elements, n
+line 2:	 pathlength (m), temperature (K), CO2 (kPa), H2O, CH4, CO, O2, N2, fv
+lines 3 through n+1:  same as line 2 for the rest of the elements
+line n+2:  wall temperature (K), minimum wavenumber (cm-1), maximum wavenumber
+line n+3:  0, or the number of homogeneous elements in the next case

@@ -1,0 +1,529 @@
+
+     ************************************************************************
+
+
+         *     *    ***    **    *  *******   ****   *****  
+         **   **   *   *   **    *     *     *    *  *    * 
+         * * * *  *     *  * *   *     *          *  *    * 
+         *  *  *  *     *  *  *  *     *      ****   *    * 
+         *     *  *     *  *   * *     *          *  *    * 
+         *     *   *   *   *    **     *     *    *  *    * 
+         *     *    ***    *    **     *      ****   *****  
+
+
+     ************************************************************************
+
+
+        title - Semispecular timing test                        
+
+        time - 13:50:31
+        date - 08/16/21
+        version - v. 2.4f1
+
+        monte version compiled - 04-15-99
+
+        machine -   f77   
+
+        filenames follow:
+            1. scratch (temporary)                         = semi.scr                    
+            2. restart                                     = semi.rst                    
+            3. plot                                        = semi.plt                    
+            4. lost photon trace                           = semi.lst                    
+            7. input                                       = semi.in                     
+            8. exchange matrix                             = semi.nij                    
+            9. traces (if traces run)                      = semi.trc                    
+           10. output                                      = semi.out                    
+           11. potential leaks                             = semi.lks                    
+           12. block exchange number (familied, temporary) = semi.bni                    
+           13. temporary exchange number (binary)          = semi.tni                    
+           14. block info (temporary)                      = semi.blk                    
+
+
+        ref: Charles N. Zeeb, Patrick J. Burns & Klem Branner
+             Department of Mechanical Engineering
+             Colorado State University
+             Fort Collins, CO 80523
+             phone: (970) 491-7479, 5778 & 7479
+             e-mail: czeeb@lamar.colostate.edu
+                     pburns@yuma.colostate.edu
+                     klem@lamar.colostate.edu
+                  and
+             John Dolaghan
+             Lawrence Livermore National Laboratory
+             e-mail: dolaghan@llnl.gov
+
+
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+     --- warning --- initial seed (inseed) must be >= 0
+       you entered         -1
+       setting initial seed to   19895660 and continuing
+
+               c o n t r o l   i n f o r m a t i o n
+
+
+
+
+
+        number of dimensions (ndim)                          =    3
+
+        number of node points (numnp)                        =    8
+
+        number of radiating surfaces (nsurf)                 =    6
+
+        number of materials (nummat)                         =   -2
+           if negative, use the new material input model
+           otherwise use the old material input model
+
+        number of radiative bands (nbands)                   =    1
+
+        default no. photons emitted per subsurface (nphton)  = 1000
+
+        max. no. reflections (nrefs)                         = 1000
+
+        max. no. of warnings that max. no. reflections
+        occured (nwarns)                                     = 1000
+
+        max. no. of lost photons (nlost)                     =  100
+
+        surf. (emitter) increment for writing restart info. 
+        (neblock)                                            =   10
+           neblock > 0 : initial run
+           neblock < 0 : restart from old restart file
+           restart information written every abs(neblock) surfaces
+
+        initial seed for Random Number Generator (RNG)       =  19895660
+           seed value meaningless for a restart run
+
+
+
+        print flags (iprnt): 0 - not printed, 1 - printed
+           iprnt (1) - exchange factors                      =    1
+           iprnt (2) - lost photons                          =    0
+           iprnt (3) - reserved for future use               =    0
+           iprnt (4) - calculated material property curves   =    0
+           iprnt (5) - grid segments                         =    0
+
+        data check code (idata)                              =    0
+           normal execution     - idata = 0
+           data check only      - idata = 1
+
+        no. of subsurface divisions in x per surface         =   10
+
+        no. of subsurface divisions in y per surface         =   10
+
+        shading or no shading                                =    1
+           shading- distance algorithm      - nshade => 0
+           shading- grid algorithm          - nshade < 0
+
+        debugging option (itraces)                           =    0
+           normal-photon trace file not produced - itraces = 0 
+           debug-photon trace file produced      - itraces = (+) 
+
+        number of worker processes (nwproc)                  =    1
+
+        parallel option flags (iparopt):                       
+           iparopt (1) - worker spawning options             =    0
+           other members of the iparopt array are reserved for 
+           future use
+
+           iparopt(1) = 0 : workers CAN spawn on master's cpu
+           iparopt(1) = 1 : workers can NOT spawn on master's cpu
+           iparopt(1) = 2 : debug session xterm for each worker
+           iparopt(1) = 3 : same as iparopt(1) = 1 and 2
+
+        number of material property curves entered (nmacv)   =    0
+
+        number of delta theta curves entered (ndtcv)         =    0
+
+
+
+        scale for x - axis (xscale)                          = 0.10000E+01
+
+        shift for x - axis (xshift)                          = 0.00000E+00
+
+        scale for y - axis (yscale)                          = 0.10000E+01
+
+        shift for y - axis (yshift)                          = 0.00000E+00
+
+        scale for z - axis (zscale)                          = 0.10000E+01
+
+        shift for z - axis (zshift)                          = 0.00000E+00
+
+        increment of theta (cone angle) for integration
+           in cumulative distribution function - r(theta)
+           increment (delt - deg)                        = 0.1000000E-01
+
+        tolerance for non-coplanar surfaces (splitol)    = 0.1000000E-03
+
+
+        grid dimensions
+        uniform grid coordinates for positive values, 
+        user-defined coordinates for negative values 
+
+        ngx                                                  =    1
+
+        ngy                                                  =    1
+
+        ngz                                                  =    1
+
+        maximum no. of photon convergence loops (nploops) =    1
+        default error tol. - photon conver. (errdef)      = 0.1000000E+11
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+       n o d a l   i n f o r m a t i o n
+
+
+        node no.          x              y              z
+
+
+             1.       0.0000E+00       0.0000E+00       0.0000E+00
+             2.       0.1000E+02       0.0000E+00       0.0000E+00
+             3.       0.1000E+02       0.1000E+02       0.0000E+00
+             4.       0.0000E+00       0.1000E+02       0.0000E+00
+             5.       0.0000E+00       0.0000E+00       0.1000E+03
+             6.       0.1000E+02       0.0000E+00       0.1000E+03
+             7.       0.1000E+02       0.1000E+02       0.1000E+03
+             8.       0.0000E+00       0.1000E+02       0.1000E+03
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+
+                           s u r f a c e    d a t a
+
+
+          Surfaces input as triangles are marked with a "#."
+          Surfaces marked with a "*" are the second halves of 
+          non-planar surfaces that have been split in two triangles.
+          The first part of the split surface is listed directly
+          above the second part. 
+          Quadrilateral surfaces with TESTCO greater than or equal
+          to SPLITOL are split.
+          TESTCO is 1 minus the dot product of the surface normals
+          of the two triangles into which a surface may be split.
+          The larger the value of TESTCO (range 0 to 2),
+          the greater the chance the split surface approximation 
+          is poor.
+
+ surface  n1    n2    n3    n4   mat  photons     area      TESTCO      errmax
+
+     1     1     2     3     4     1  1000 0.10000E+03 0.00000E+00 0.10000E+11
+     2     5     8     7     6     1  1000 0.10000E+03 0.00000E+00 0.10000E+11
+     3     1     5     6     2     2  1000 0.10000E+04 0.00000E+00 0.10000E+11
+     4     3     7     8     4     2  1000 0.10000E+04 0.00000E+00 0.10000E+11
+     5     1     4     8     5     2  1000 0.10000E+04 0.00000E+00 0.10000E+11
+     6     2     6     7     3     2  1000 0.10000E+04 0.00000E+00 0.10000E+11
+
+
+          split surfaces information 
+
+     original number of surfaces       =     6
+     number of split surfaces          =     0
+     number of total surfaces now      =     6
+
+
+
+     coordinate bounding values follow
+  xmin             = 0.0000000E+00
+  ymin             = 0.0000000E+00
+  zmin             = 0.0000000E+00
+  xmax             = 0.1000000E+02
+  ymax             = 0.1000000E+02
+  zmax             = 0.1000000E+03
+  dxmax            = 0.1000000E+02
+  dymax            = 0.1000000E+02
+  dzmax            = 0.1000000E+03
+
+
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+       b a n d   w a v e l e n g t h   d a t a
+
+
+
+  breakpoint no.  wavelength
+                 (micrometers)
+
+
+         0.      0.0000E+00
+         1.      0.1000E+11
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+
+        NEW material model   Emission types (ietp) are:
+          type     emission 
+            2  -   function 
+            1  -       beam 
+            0  - eps(theta) 
+        constant curves have values greater than or equal to 0 
+        negative curve values give index of curve to be used
+
+
+
+
+        material properties for material     1:
+        material properties are the same for all bands
+
+
+ band ietp       ebx       eby       ebz     rrhod    rrhoss     rtaud    rtauss
+    0    0   0.00000   0.00000   0.00000   1.0       1.0       1.0       1.0    
+
+      rhod      rhos     rhoss      taud      taus     tauss    dthrss    dthtss
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+
+
+
+        material properties for material     2:
+        material properties are the same for all bands
+
+
+ band ietp       ebx       eby       ebz     rrhod    rrhoss     rtaud    rtauss
+    0    0   0.00000   0.00000   0.00000   1.0      0.25       1.0       1.0    
+
+      rhod      rhos     rhoss      taud      taus     tauss    dthrss    dthtss
+   0.00000   0.00000   0.50000   0.00000   0.00000   0.00000   0.00000   0.00000
+
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+       t h e t a    v s.   r ( t h e t a ) 
+
+  mat. no.    1       band no.    1       embar  1.000000
+
+
+
+       t h e t a    v s.   r ( t h e t a ) 
+
+  mat. no.    2       band no.    1       embar  0.500000
+
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+        This is an initial run
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+
+       g r i d   i n f o . ( s h a d i n g )
+
+
+     grid  locations
+
+
+
+  x - locations
+
+
+  -0.23466E+00
+   0.10265E+02
+
+
+
+
+  y - locations
+
+
+  -0.23466E+00
+   0.10265E+02
+
+
+
+
+  z - locations
+
+
+  -0.23466E+01
+   0.10265E+03
+
+
+       grid statistics
+
+
+       total number of segments found =                          6
+       total number of grid cells =                              1
+       total number of EMPTY grid cells =                        0
+       average number of surfaces per cell =                 6.00000
+       average number of surfaces per NONempty cell =        6.00000
+       maximum number of surfaces per cell =                     6
+       number of grid cells having the maximum number =          1
+
+
+
+
+
+        M e m o r y   A l l o c a t i o n   a n d   U s a g e
+
+Category                                       Allocated       Used
+
+ 1. Nodes (inod)                                15000 words      8 words (  0%)
+ 2. Surfaces (isrf)                              5000 words      6 words (  0%)
+ 3. Materials (imat)                               30 words      2 words (  7%)
+ 4. Wavelength bands (ibnd)                         5 words      1 words ( 20%)
+ 5. Restart surface block size (iblk)             200 words     10 words (  5%)
+ 6. Restart blocks (itblk)                       1000 words      1 words (  0%)
+ 7. Index digits for filename (iimag)               4 words      1 words ( 25%)
+ 8. Grid divisions per axis (incg)                 60 words      1 words (  2%)
+ 9. Surfaces including split surfaces (isrfs)    7000 words      6 words (  0%)
+10. Surface segments in grid cells (iseg)      100000 words      6 words (  0%)
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+       e n c l o s u r e  l e a k  c h e c k i n g
+
+
+
+
+
+     no enclosure leaks detected
+
+
+
+         i n p u t   p h a s e   c o m p l e t e
+
+
+
+
+
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     1  tot phtns     100000  embar  1.00000
+  area  0.10000E+03  error  0.2121E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.03094    2 0.03701    3 0.23327    4 0.23124    5 0.23274    6 0.23480
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     2  tot phtns     100000  embar  1.00000
+  area  0.10000E+03  error  0.2118E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.03604    2 0.03033    3 0.23150    4 0.23533    5 0.23182    6 0.23498
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     3  tot phtns     100000  embar  0.50000
+  area  0.10000E+04  error  0.2137E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.05388    2 0.05569    3 0.10057    4 0.32594    5 0.23034    6 0.23358
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     4  tot phtns     100000  embar  0.50000
+  area  0.10000E+04  error  0.2138E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.05627    2 0.05430    3 0.32566    4 0.09965    5 0.23287    6 0.23125
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     5  tot phtns     100000  embar  0.50000
+  area  0.10000E+04  error  0.2137E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.05601    2 0.05464    3 0.23336    4 0.23252    5 0.09783    6 0.32564
+
+                    e x c h a n g e   f r a c t i o n s
+  band  1  surface     6  tot phtns     100000  embar  0.50000
+  area  0.10000E+04  error  0.2141E-02 - converged
+  8( j  fabs(i,j) )
+    1 0.05593    2 0.05593    3 0.23112    4 0.23056    5 0.32537    6 0.10109
+
+
+   ***************************************************************************
+   Semispecular timing test                         v. 2.4f1 04-15-99   f77   
+   ***************************************************************************
+
+
+
+
+
+
+     normal termination
+
+
+
+
+
+ Convergence information for band   1
+         0 out of the     6 completed surfaces did not emit 
+     and     6 out of the    6 emitting  surfaces converged.
+     for the emitting surfaces: 
+        Average error = 0.2132E-02
+        Minimum error = 0.2118E-02   on surface    2
+        Maximum error = 0.2141E-02   on surface    6
+
+                    s o l u t i o n   t i m e   l o g 
+
+
+     time for input phase                    =  0.50000E+01 secs
+     time for solution phase                 =  0.10000E+01 secs
+     time for cleaning up                    =  0.00000E+00 secs
+     total run time                          =  0.60000E+01 secs
+     total number of photons emitted         =  0.60000E+06
+     total number of photons lost            =          0
+     photons per second (solution phase)     =   600000.000
+     photons per second (total run)          =   100000.000
+
+     all results are given in wall clock time

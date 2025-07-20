@@ -1,0 +1,167 @@
+      SUBROUTINE WBMH2O(TEMP,PSIE,PHIE)
+C THIS ROUTINE CALCULATES THE LINE OVERLAP FUNCTION GAMMA (PHI/SQRT(T))
+C AND STRENGTH FUNCTION ALPHA (PSI*) AS FUNCTION OF
+C TEMPERATURE, THEN NORMALIZES THEM WITH THE VALUE AT 100K
+C *** STEAM ***
+      IMPLICIT REAL*8 (A-H,O-Z)
+      DIMENSION ETA(3),DELTA(3),G(3),A0(3),B0(3),U(3),
+     1          PHIE(4),PSIE(4)
+C
+C SET UP BASIC PARAMETERS FOR DIFFERENT BANDS
+C
+      M=3
+      ETA(1)=3652.D0
+      ETA(2)=1595.D0
+      ETA(3)=3756.D0
+      G(1)=1.D0
+      G(2)=1.D0
+      G(3)=1.D0
+C
+C *** EXTRA WORK NEEDED FOR NONFUNDAMENTAL 2.7mum BAND  ***
+C DO IT FIRST
+C
+C LOOP OVER DIFFERENT BANDS WITHIN 2.7 MU BAND
+C
+      DO 3000 IB=1,3
+C
+C SET UP PARAMETERS FOR INDIVIDUAL BANDS
+C
+      DO 3001 K=1,3
+      DELTA(K)=0.D0
+      B0(K)=1.D0
+ 3001 A0(K)=1.D0
+      IF(IB.EQ.1) THEN
+           DELTA(2)=2.D0
+           A0(2)=2.D0
+        ENDIF
+      IF(IB.EQ.2) DELTA(1)=1.D0
+      IF(IB.EQ.3) DELTA(3)=1.D0
+C
+C CALCULATE PHIRATIO AT SET OF TEMPERATURES
+C
+      DO 2900 IT=1,2
+      T=100.D0*(1/IT)+(IT-1)*TEMP
+      PHIT=1.D0
+      PSIT=1.D0
+      DO 900 K=1,M
+      A=A0(K)
+      B=B0(K)
+      U(K)=1.4388D0*ETA(K)/T
+      EX1=DEXP(-U(K))
+      PHIN=DSQRT(A)
+      PHID=A
+      PHIB=B
+      EX=1.D0
+      VC=G(K)+DELTA(K)-1.D0
+      VB=G(K)-1.D0
+      V=0.D0
+  29  V=V+1.D0
+      A=A*(1.D0+VC/V)
+      B=B*(1.D0+VB/V)
+      EX=EX*EX1
+      AEX=A*EX
+      BEX=B*EX
+      PHIN=PHIN+DSQRT (AEX)
+      PHID=PHID+AEX
+      PHIB=PHIB+BEX
+      IF(AEX.GT.1.D-12) GOTO 29
+      PHI=PHIN*PHIN/PHID
+      PSI=PHID/PHIB
+      PSIT=PSIT*PSI
+  900 PHIT=PHIT*PHI
+      PSIT=PSIT*(1.D0-DEXP(-U(1)*DELTA(1)-U(2)*DELTA(2)-U(3)*DELTA(3)))
+C
+      IF(IT.EQ.1) THEN
+          PHIT0=PHIT
+          PSIT0=PSIT
+        ELSE
+          PHIE(IB)=PHIT/PHIT0*DSQRT(1.D2/T)
+          PSIE(IB)=PSIT/PSIT0
+        ENDIF
+ 2900 CONTINUE
+ 3000 CONTINUE
+      PSIT=.19D0*PSIE(1)+2.3D0*PSIE(2)+23.4D0*PSIE(3)
+      BETA=(DSQRT(.19D0*PSIE(1)*PHIE(1))
+     2     +DSQRT(2.3D0*PSIE(2)*PHIE(2))
+     1     +DSQRT(23.4*PSIE(3)*PHIE(3)))**2/PSIT
+      PSIE(2)=PSIT/25.89D0
+      PHIE(2)=BETA
+C
+C NOW SCAN OVER THE 3 IMPORTANT FUNDAMENTAL BANDS
+C
+      DO 2000 IB=1,4
+C
+C  INITIAL VALUES OF SUM ARGUMENTS (A=NUMERATOR, B=DENOMINATOR)
+C
+      DO 9 K=1,M
+      B0(K)=1.D0
+    9 A0(K)=1.D0
+C *** 6.3MUM BAND ****
+      IF(IB.EQ.1) THEN
+            DELTA(1)=0.D0
+            DELTA(2)=1.D0
+            DELTA(3)=0.D0
+            ENDIF
+C *** 2.7MUM BAND ****
+      IF(IB.EQ.2) CYCLE
+C *** 1.87MUM BAND ****
+      IF(IB.EQ.3) THEN
+            DELTA(1)=0.D0
+            DELTA(2)=1.D0
+            DELTA(3)=1.D0
+            ENDIF
+C *** 1.38MUM BAND ****
+      IF(IB.EQ.4) THEN
+            DELTA(1)=1.D0
+            DELTA(2)=0.D0
+            DELTA(3)=1.D0
+            ENDIF
+C
+C CALCULATE PHIRATIO AND PSIRATIO AT SET OF TEMPERATURES
+C
+      DO 1000 IT=1,2
+      T=100.D0*(1/IT)+(IT-1)*TEMP
+      PHIT=1.D0
+      PSIT=1.D0
+      DO 100 K=1,M
+      A=A0(K)
+      B=B0(K)
+      U(K)=1.4388D0*ETA(K)/T
+      EX1=DEXP(-U(K))
+      PHIN=DSQRT(A)
+      PHID=A
+      PHIB=B
+      EX=1.D0
+      VC=G(K)+DELTA(K)-1D0
+      VB=G(K)-1D0
+      V=0.D0
+  10  V=V+1.D0
+      A=A*(1.D0+VC/V)
+      B=B*(1.D0+VB/V)
+      EX=EX*EX1
+      AEX=A*EX
+      BEX=B*EX
+      PHIN=PHIN+DSQRT(AEX)
+      PHID=PHID+AEX
+      PHIB=PHIB+BEX
+      IF(AEX.GT.1.D-12) GOTO 10
+      PHI=PHIN*PHIN/PHID
+      PSI=PHID/PHIB
+      PSIT=PSIT*PSI
+  100 PHIT=PHIT*PHI
+      FAC=0.D0
+      DO 110 K=1,M
+  110 FAC=FAC+U(K)*DELTA(K)
+      PSIT=PSIT*(1.D0-DEXP(-FAC))
+C
+      IF(IT.EQ.1) THEN
+          PHIT0=PHIT
+          PSIT0=PSIT
+         ELSE
+          PHIE(IB)=PHIT/PHIT0*DSQRT(1.D2/T)
+          PSIE(IB)=PSIT/PSIT0
+         ENDIF
+ 1000 CONTINUE
+ 2000 CONTINUE
+      RETURN
+      END

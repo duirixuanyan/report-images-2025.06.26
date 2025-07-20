@@ -1,0 +1,160 @@
+c     -*-Fortran-*-
+c  NOTE: Statement above makes EMACS editor open this file in FORTRAN
+c  mode  
+c*********************************************************************     
+c
+c     mont3d.par
+c
+c*********************************************************************
+c     general parameters for all files in MONT3D
+c
+c     ***Precision control*** 
+c     the precision of real and integer variables in the program can 
+c     be changed using the implicit statement below
+c     the program assumes integers are four bytes, there may be problems 
+c     if this is switched
+c     NOTE: while MONT3D can be compiled in single precision, this is 
+c     is not recommended.  Precision errors occur for even the simpliest 
+c     geometries when single precision is used
+c
+      implicit real*8 (a-h, o-z)
+      implicit integer*4 (i-n)
+c
+c     ***Array size control***
+c        ***General arrays***                                     
+c     iblk   = maximum number of surfaces per restart block  
+c     ibnd   = maximum number of wavelength bands             
+c     imat   = maximum number of material types 
+c     inod   = maximum number of nodes 
+c     isrf   = maximum number of original (unsplit) surfaces 
+c     isrfs  = maximum number surfaces including split surfaces   
+c     itblk  = the maximum number of blocks the problem will be divided
+c               into (maximum number of indexed files created)  
+c     itne   = the maximum number of surface-band emitters to do        
+c     ibkel  = the maximum length of nbkemitlist
+c     iwproc = the maximum number of processes to use
+c     imnl   = the length of a material's name 20
+c     inmnl  = the length of a new material model's name  
+c     istack = used in sorting emittors for load balancing
+c            it must be at least 2*ln(netot)/ln(2)     
+c
+      parameter (iblk=200, ibnd=1, imat=5, inod=500, isrf=500)
+      parameter (isrfs=500, itblk=10, itne=isrf*ibnd)
+      parameter (ibkel=2*itne, iwproc = 16, imnl = 16, istack = 50)
+      parameter (inmnl = 20)
+c
+c        ***Grid arrays*** 
+c     igrd = maximum number of total grid divisions 
+c     incg = maximum number of grid divisions in the any direction
+c     iseg = maximum number of surface segments in all grids 
+c
+       parameter (incg = 10, igrd =incg**3 + 1, iseg = 500)
+c
+c        ***File arrays***
+c
+c     ifil  = maximum number of files to be created
+c     ifln  = maximum length of the base name of a file
+c     iflni = maximum length of a file name with indices
+c     iflnt = maximum length of a file name without indices
+c     iimag =  the maximum number of digits (magnitude) for  the indices 
+c              used for scratch files
+c     ilarg = the length of a command argument 
+c     isln = the length of a suffix
+c 
+      parameter (ifil = 14, ifln = 20, ilarg = 30)
+      parameter (isln = 4, iflnt = ifln + isln)
+      parameter (iimag = 2)
+      parameter (iflni = iflnt + iimag)
+c
+c     ***Random number generator***
+c
+c     These parameters are only used by the lagged Fibonacci (LF) RNG 
+c     ranlf.
+c     For values of lflen, lflag, lfl, and lfs, see the values of 
+c     l, k, L, S given in Implementation of a Portable and 
+c     Reproducible Parallel Psuedorandom Number Generator by Pryor, 
+c     Cuccaro, Mascagni, and Robinson, 1994
+c     popular values are:  (55, 24, 1, 11), (127, 97, 1, 21), and 
+c     (607, 273, 1, 105)
+c     See the manual for more details
+c
+      parameter (lflen = 127, lflag = 97, lfl = 1, lfs = 21)
+c     parameter (lflen = 17, lflag = 5, lfl = 1, lfs = 12)
+      parameter (modulus=2147483647, mod30=1073741823)
+c
+c     ***File handling***
+c
+c     the if parameters are used as input by the file handling routines to 
+c     determine which action to take: 
+c     com = combine .nij file, init = do initialization work on the file,
+c     rd = read file, rdbk = read one block exchange number file,
+c     split = split .nij file
+c     wrt = write file, wrtbk = write one block exchange number file
+c
+      parameter (ifcom = 1, ifinit = 2, ifrd = 3, ifrdbk = 4)
+      parameter (ifsplit = 5, ifwrt = 6, ifwrtbk = 7)
+c
+c     ***Error codes***
+c
+c     the ie parameter is used to determine what sort of error occured:
+c     epout = emission point out of grid (getpntgrd)
+c     plost = too many lost photons (grdint)
+c     ref = too many reflections (surfloop)
+c     para = parallel function error (errorcheckpvm for pvm) 
+c     mall = not enough memory allocated on worker (input3)
+c
+      parameter (ieepout  = 1, ieplost = 2, ieref = 3, iepara = 4)
+      parameter (iemall  = 5)
+c
+c     ***curve codes***
+c
+c     the ic parameters are used to determine the curve we are dealing with:
+c     rd, rs, rss = diffuse, specular, and semi-specular reflection curves
+c     td, ts, tss = diffuse, specular, and semi-specular, tramsmitance curves
+c     dtr = del theta curves for semi-specular ref and tran
+c
+      parameter (icrd = 1, icrs = 2, icrss = 3, ictd = 4, icts = 5)
+      parameter (ictss = 6, icdtr = 7, icdtt = 8)
+c
+c     ***iaction codes***
+c
+c     the ia parameter is used to determine which action we are dealing with:
+c     rd, rs, rss = diffuse, specular, and semi-specular reflections
+c     td, ts, tss = diffuse, specular, and semi-specular tramsmitions
+c     em = emittance
+c     ab = absorptance
+c
+      parameter (iaab = 4, iaem = -4, iard = 1, iars = 2, iarss = 3)
+      parameter (iatd = -1, iats = -2, iatss = -3)
+c
+c     ***RNG initialization ***
+c
+c     the ir parameter is used to determine how the RNG is intialized:
+c     cont   = uses a previously stored state
+c     start  = starts a new random sequence
+      parameter (ircont  = 1, irstart = 2)
+c
+c     ***Misc***
+c
+c     ilerrs is the number of type of errors the surface input routines keeps 
+c        count for the error report at the end of either the first or second 
+c        part of surface input
+c     iseeddef is the default value for the RNG seed
+c     itha is the length of the arrays used to interpolate theta for emission
+c     delitha = 1/itha
+c     ncntrl is the number of variables in the icntrl array used
+c        in the header of the exchange matrix (.nij) file
+c     pdamax is the maximum percent difference the code allows in the areas 
+c        determined by splitting a quadrilateral into two different sets of 
+c        triangles. The code terminates with an error if this is reach for 
+c        a coplanar surface and gives a warning when non-coplanar surfaces 
+c        go past this limit. See the release notes for version 2.4b4 for 
+c        more info. If the code is not detecting all concave surfaces, 
+c        lower the value of this parameter
+c     zee from normal tables, 1.96 = 2 std. dev. (95% confidence)
+c        See Advanced Engineering Mathematics, 7th Ed by Kreyszig, 1993
+c        for more values
+c
+      parameter (ilerrs = 7,  iseeddef = 19895660, itha = 100)
+      parameter (delitha = 1.d0/itha, ncntrl = 5, pdamax = 1e-3)
+      parameter (zee = 1.96d0)
